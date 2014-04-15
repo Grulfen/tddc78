@@ -1,81 +1,53 @@
 1 process
 Image 1: Average time 0.0072195
-
 Image 2: Average time 0.0149055
-
 Image 3: Average time 0.0278738
-
 Image 4: Average time 0.1319249
 
 2 processes
 Image 1: Average time 0.0049713
-
 Image 2: Average time 0.0100418
-
 Image 3: Average time 0.0189010
-
 Image 4: Average time 0.0929554
 
 3 processes
 Image 1: Average time 0.0139033
-
 Image 2: Average time 0.0178441
-
 Image 3: Average time 0.0252615
-
 Image 4: Average time 0.0795558
 
 4 processes
 Image 1: Average time 0.0113549
-
 Image 2: Average time 0.0271220
-
 Image 3: Average time 0.0244638
-
 Image 4: Average time 0.0713919
 
 5 processes
 Image 1: Average time 0.0206356
-
 Image 2: Average time 0.0218459
-
 Image 3: Average time 0.0350323
-
 Image 4: Average time 0.0625837
 
 8 processes
 Image 1: Average time 0.0385929
-
 Image 2: Average time 0.0648044
-
 Image 3: Average time 0.0779704
-
 Image 4: Average time 0.1454821
 
 10 processes
 Image 1: Average time 0.0152448
-
 Image 2: Average time 0.0136221
-
 Image 3: Average time 0.0149509
-
 Image 4: Average time 0.0378002
 
 13 processes
 Image 1: Average time 0.0274757
-
 Image 2: Average time 0.0275453
-
 Image 3: Average time 0.0233808
-
 Image 4: Average time 0.0410577
 
 16 processes
 Image 1: Average time 0.0462149
-
 Image 2: Average time 0.0466002
-
 Image 3: Average time 0.0430928
-
 Image 4: Average time 0.0451086
-
