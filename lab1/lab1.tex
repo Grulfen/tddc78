@@ -22,9 +22,39 @@
 \newpage
 
 \section{Averaging Filter}
+In the average filter each pixel gets its value according to a weighted average
+of neighbouring pixels in the shape of a rectangle with a user specified radius. 
+Our implementation uses the given Gaussian distribution.
 
 \subsection{Description}
+This section provides a high level overview of the parallel program. 
+The code is of the same structure as the one provided on the course homepage,
+but with added functionality for MPI. When the
+program is started the root processor reads the input file and calls
+the function calculating the Gaussian coefficients. The root processor then
+broadcasts Gaussian coefficients, radius of the rectangle and size of the image.
+
+
+In order to utilize the cache functionality as much as possible we split the image
+horizontally in equally large parts. If the y-size of the image is not divisible
+by the number of processors used the last processor will be assigned the
+additional lines. Each processor will allocate local memory for their part of the
+image plus extra shadow pixels needed to filter along the y-axis. The memory
+needed for these shadow pixels will correspond to two times the width of the
+image times the radius of the filtering rectangle. The root processor then 
+scatters the image to every processor.  
+
+
+The filter function provided have been split into two separate functions, the
+first filtering along the x-axis and the other filtering along the y-axis. Some
+small changes had to be made to copy memory and handle the shadow pixels. 
+ 
+
 \subsection{Performance}
+The execution time is measured using the MPI\_Wtime() function. It is started
+after the root processor has calculated the Gaussian
+coefficients and is ended before the root processor writes the output file.
+
 \subsection{Source}
 
 \section{Threshold Filter}
