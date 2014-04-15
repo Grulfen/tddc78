@@ -32,4 +32,4 @@ clean:
 	rm -f lab1.aux lab1.log lab1.toc
 
 cleanall:
-	rm -f lab1.pdf result/thres/result.txt result/thres/result.dat
+	rm -f lab1.pdf result/thres/result.txt result/thres/result.dat threshold.png
