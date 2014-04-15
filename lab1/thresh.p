@@ -1,5 +1,5 @@
 set autoscale
-set xlabel "Processes"
+set xlabel "Number of processes"
 set ylabel "Average execution time"
 set terminal png
 set output 'threshold.png'
