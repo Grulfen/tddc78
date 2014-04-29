@@ -8,21 +8,14 @@
 
 int main (int argc, char ** argv) {
         int xsize, ysize, colmax;
-        int NUM_THREADS;
-        int i, ret, g_sum = 0;
-        pixel *src = (pixel*)malloc(sizeof(pixel)*MAX_PIXELS);
-        struct timespec stime, etime;
-        pthread_t threads[NUM_THREADS];
-        pixel_n *pdata[NUM_THREADS];
-        int pix_p_thread;
 
         /* Take care of the arguments */
         if (argc != 4) {
                 fprintf(stderr, "Usage: %s num_threads infile outfile\n", argv[0]);
-                free(src);
                 exit(1);
         }
 
+        pixel *src = (pixel*)malloc(sizeof(pixel)*MAX_PIXELS);
         /* read file */
         if(read_ppm (argv[2], &xsize, &ysize, &colmax, (char *) src) != 0){
                 free(src);
@@ -36,7 +29,18 @@ int main (int argc, char ** argv) {
                 exit(1);
         }
 
-        NUM_THREADS = atoi(argv[1]);
+
+        int NUM_THREADS = atoi(argv[1]);
+        int i, ret;
+        unsigned long g_sum = 0;
+        struct timespec stime, etime;
+
+        // Threads
+        pthread_t threads[NUM_THREADS];
+
+        // Structs containing the data for the threads
+        pixel_n *pdata[NUM_THREADS];
+        int pix_p_thread;
 
         printf("Has read the image, calling filter\n");
 

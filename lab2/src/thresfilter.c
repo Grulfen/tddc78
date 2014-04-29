@@ -11,7 +11,7 @@ void *threshold(void *pdata){
         pixel *src = ((pixel_n*)pdata)->src;
 
         int i;
-        int *sum = ((pixel_n*)pdata)->sum;
+        unsigned long *sum = ((pixel_n*)pdata)->sum;
 
         for(i = 0; i < n; i++) {
                 *sum += (uint)src[i].r + (uint)src[i].g + (uint)src[i].b;
@@ -23,7 +23,7 @@ void *thresfilter(void *pdata){
 
         uint i, psum, nump = ((pixel_n*)pdata)->n;
         pixel *src = ((pixel_n*)pdata)->src;
-        uint threshold_value = ((pixel_n*)pdata)->threshold_value;
+        unsigned long threshold_value = ((pixel_n*)pdata)->threshold_value;
 
         for(i = 0; i < nump; i++) {
                 psum = (uint)src[i].r + (uint)src[i].g + (uint)src[i].b;

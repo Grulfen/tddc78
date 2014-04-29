@@ -11,11 +11,15 @@ typedef struct _pixel {
     unsigned char r,g,b;
 } pixel;
 
+// struct pixel_n
+// Contains the pointer to the pixel array,
+// pointer to sum to return the sum of pixel values to main program and
+// threshold_value
 typedef struct _pixel_n {
     pixel* src;
     int n;
-    int *sum;
-    unsigned int threshold_value;
+    unsigned long *sum;
+    unsigned long threshold_value;
 } pixel_n;
 
 void *thresfilter(void *pdata);
