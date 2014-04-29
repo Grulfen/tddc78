@@ -61,7 +61,7 @@ corresponding to the position in the image.
 Passing the filtered image back to the root process is done by the last process 
 first sending the filtered left over part from the integer division. The main
 part of the image is passed back using the gather function.
-The root then writes the image back to memory.
+The root then writes the image back to a file.
  
 
 \subsection{Performance}
@@ -72,8 +72,35 @@ coefficients and is ended before the root processor writes the output file.
 \subsection{Source}
 
 \section{Threshold Filter}
+The threshold filter computes the average intensity of the image and then use
+this as a threshold value.
+
 \subsection{Description}
+The parallelized code keeps the basic structure of the example code provided on
+the course homepage and the parallelization is done in a straight forward
+fashion. As in the averaging filter the image is split horizontally, but in this
+implementation the root process takes care of the part remaining after the
+integer division.
+
+The filter function has been split into two separate functions, one calculating the threshold
+value and one doing the filtering.
+
+When starting the execution the root process reads the image followed by a
+broadcast of the total size. Each process then allocate memory for its slice of
+the image. After the root process has scattered the image, the processes
+calculate a threshold value for their local part followed by an all reduce
+function to add all local values together to a global threshold.
+
+All processes then runs the filter on their local part, with the root
+calculating a slightly larger portion. The gather function is used to pass the
+filtered image back to the root process, which writes back to file.
+
 \subsection{Performance}
+
+The execution time is measured using the MPI\_Wtime() function. It is started
+after the root processor has read the input file
+and is ended before writing the output file.
+
 \subsection{Source}
 
 \end{document}
