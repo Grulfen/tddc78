@@ -1,7 +1,6 @@
 set autoscale
 set xlabel "Number of processes"
 set ylabel "Average execution time"
-set logscale y
 set title "Radius 4"
 set terminal png
 set output 'blur_4.png'
