@@ -44,10 +44,24 @@ needed for these shadow pixels will correspond to two times the width of the
 image times the radius of the filtering rectangle. The root processor then 
 scatters the image to every processor.  
 
-
 The filter function provided have been split into two separate functions, the
 first filtering along the x-axis and the other filtering along the y-axis. Some
-small changes had to be made to copy memory and handle the shadow pixels. 
+small changes had to be made to copy memory and handle the shadow pixels. The
+y-filter have two additional arguments specifying if the process will need
+information about shadow pixels from another process or not. 
+
+If there is only one process it will just call the two filter functions. If
+there are more than one process the root process first sends the part of the
+image left over after the integer division to the last process. All processes
+filter along the x-axis which require no message passing between them.
+The required shadow pixels are then passed, starting by first sending "upward"
+then "downward". The y-filter is called by each process with the arguments 
+corresponding to the position in the image. 
+
+Passing the filtered image back to the root process is done by the last process 
+first sending the filtered left over part from the integer division. The main
+part of the image is passed back using the gather function.
+The root then writes the image back to memory.
  
 
 \subsection{Performance}
