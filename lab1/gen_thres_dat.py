@@ -1,4 +1,3 @@
-import sys
 import re
 
 def print_first():

@@ -1,0 +1,767 @@
+Image 1 - 9 runs radius 4
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.142958
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.127919
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.131428
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.124084
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.124916
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.115363
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.127732
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.119988
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.116847
+
+Image 1 - 9 runs radius 8
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.081255
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.092411
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.095691
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.284679
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.092288
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.086387
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.691152
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.079006
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.086586
+
+Image 1 - 9 runs radius 16
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.135974
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.319412
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.127341
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.119831
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:03.319249
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.725927
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.129149
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.129847
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.129192
+
+Image 1 - 9 runs radius 32
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.132865
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.135016
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.127588
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.320965
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.122814
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.123729
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.101072
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.097946
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.091722
+
+Image 2 - 9 runs radius 4
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.074766
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:04.132106
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.119542
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.118613
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.126128
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.114353
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.318862
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.363969
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.117361
+
+Image 2 - 9 runs radius 8
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.116166
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.526312
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.131202
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.124896
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.121197
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.135240
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.130416
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.130485
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.114877
+
+Image 2 - 9 runs radius 16
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.130264
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.128163
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.130384
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.081081
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.082447
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.079739
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.281921
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.077244
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.089729
+
+Image 2 - 9 runs radius 32
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.096603
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.077984
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.078159
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.077383
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.096553
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.139611
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.121168
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.122514
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.119855
+
+Image 3 - 9 runs radius 4
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.129761
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.130795
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.121487
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.118738
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.117459
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.116006
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.078480
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.097938
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.098306
+
+Image 3 - 9 runs radius 8
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.080395
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.092471
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.086742
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.093841
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.081369
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.083369
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.281289
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.079613
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.339347
+
+Image 3 - 9 runs radius 16
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.130807
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.120451
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.116784
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.121219
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.120415
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.119836
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.123449
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.119650
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.133223
+
+Image 3 - 9 runs radius 32
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.281475
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.092883
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.085965
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.079861
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.281572
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.082110
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.089480
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.076596
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.743496
+
+Image 4 - 9 runs radius 4
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.116844
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.134394
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.130273
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.124463
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.128159
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.120226
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.130391
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.120605
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.119955
+
+Image 4 - 9 runs radius 8
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.090038
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.086764
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.281995
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.279602
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.089281
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.288615
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.090303
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:08.936916
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.121175
+
+Image 4 - 9 runs radius 16
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.327651
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:03.207276
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.123659
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.130899
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.122507
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:06.645100
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.131456
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.128256
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.125664
+
+Image 4 - 9 runs radius 32
+
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.126945
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.117108
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.122355
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.118541
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.132991
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.116252
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.708057
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.135368
+mpprun INFO: Starting impi run on 1 node ( 12 ranks )
+[mpiexec@n331] HYDT_dmxu_poll_wait_for_event (./tools/demux/demux_poll.c:70): assert (!(pollfds[i].revents & ~POLLIN & ~POLLOUT & ~POLLHUP)) failed
+[mpiexec@n331] HYD_pmci_wait_for_completion (./pm/pmiserv/pmiserv_pmci.c:511): error waiting for event
+[mpiexec@n331] main (./ui/mpich/mpiexec.c:548): process manager error waiting for completion
+mpprun INFO: Elapsed time (h:m:s):  0:00:00.117070

@@ -1,0 +1,479 @@
+Image 1 - 9 runs radius 4
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.019279 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.531892
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.019413 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.593918
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0190661 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.360728
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.018543 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.351473
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0186131 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.367595
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0193419 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.363206
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0257809 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.354460
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0262539 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.359159
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.019762 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.364768
+
+Image 1 - 9 runs radius 8
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0335412 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.347888
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.032156 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.356470
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0308721 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.361025
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0346091 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.411715
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.040221 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.397124
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0290458 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.366124
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0288188 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.343570
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.031709 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.410882
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0295951 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.352544
+
+Image 1 - 9 runs radius 16
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.046629 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.404938
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0475771 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.371364
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0472651 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.390231
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0500472 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.379451
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0496829 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.392586
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0558121 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.380926
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.047632 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.392686
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0545011 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.358057
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0522511 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.380128
+
+Image 1 - 9 runs radius 32
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.087281 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.391296
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.085835 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.384030
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0888062 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.421587
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.091275 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.428872
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0903661 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.439652
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0870769 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.419731
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.086786 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.498156
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0862501 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:03.459682
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0910139 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.417199
+
+Image 2 - 9 runs radius 4
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.031703 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:05.696400
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.032459 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.332988
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0316479 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.361675
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0349491 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.359803
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0328419 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.358806
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.040318 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.408558
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.031045 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.374352
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0336971 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.359601
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0313499 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.410652
+
+Image 2 - 9 runs radius 8
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0561461 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.360655
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0575969 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.371933
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0565062 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.393067
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.059747 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.378811
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.052464 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.389894
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0696099 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.385579
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0590379 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.425650
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0569642 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.390566
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.053771 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.374588
+
+Image 2 - 9 runs radius 16
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0970409 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.400798
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0951409 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.391500
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.106206 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.414010
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0927231 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.433363
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0927808 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.519767
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0927889 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.529995
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.092766 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.482975
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.092838 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.430591
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0970979 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.418040
+
+Image 2 - 9 runs radius 32
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.178708 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.489694
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.175807 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.470804
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.176388 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.532388
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.172523 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.505045
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.176405 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.508306
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.176487 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.506802
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.175547 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.507866
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.179096 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.496480
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.175974 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.510976
+
+Image 3 - 9 runs radius 4
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0551221 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.422586
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0589261 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:03.414573
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0546391 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.416494
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0515928 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.360753
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0567651 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.379789
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0568118 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:05.429178
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0524879 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.435645
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.052578 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.471863
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0591609 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.437013
+
+Image 3 - 9 runs radius 8
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0879669 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.400103
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.089751 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.413880
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.096813 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.402928
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.090014 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.393123
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0880659 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.406840
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0933669 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.880871
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.0895219 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.421180
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.092942 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.514616
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.093569 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.427068
+
+Image 3 - 9 runs radius 16
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.164647 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.479022
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.167104 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.465072
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.169664 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.472702
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.164586 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.502733
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.164265 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.545100
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.166617 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.543440
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.162723 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.502426
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.172267 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.530649
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.164053 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.568255
+
+Image 3 - 9 runs radius 32
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.307071 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.643037
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.307054 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.630827
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.309803 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.612917
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.309796 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.618867
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.303751 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.661990
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.308602 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.732078
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.309357 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:04.707107
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.307033 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.663991
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.308734 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:01.657870
+
+Image 4 - 9 runs radius 4
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.228813 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.175104
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.229303 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:05.318542
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.233954 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.019893
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.229559 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:05.788759
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.228587 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.081642
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.22963 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.132867
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.232037 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.075232
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.228678 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.067021
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.23724 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.088350
+
+Image 4 - 9 runs radius 8
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.412539 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.187102
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.412371 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.160075
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.404881 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:07.299562
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.410447 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.173349
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.405461 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.194874
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.409069 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.184568
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.407659 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.255033
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.409588 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.243367
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.405187 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.262507
+
+Image 4 - 9 runs radius 16
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.742641 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.627167
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.74918 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:03.832321
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.739915 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.604563
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.740443 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.629179
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.742713 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.553853
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.7421 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.589950
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.741614 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.534627
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.742824 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.526925
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 0.74226 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:02.585624
+
+Image 4 - 9 runs radius 32
+
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 1.41769 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:04.839615
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 1.42112 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:04.743547
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 1.41727 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:03.236840
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 1.42033 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:03.174763
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 1.42312 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:04.463264
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 1.41916 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:05.229716
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 1.41625 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:03.183302
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 1.41858 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:03.251101
+mpprun INFO: Starting impi run on 2 node ( 20 ranks )
+Filtering took: 1.42124 secs
+mpprun INFO: Elapsed time (h:m:s):  0:00:04.245119

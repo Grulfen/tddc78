@@ -21,15 +21,18 @@ rapport: lab1.tex
 	pdflatex lab1.tex
 	pdflatex lab1.tex
 
-data: get_average_thresh.py $(DATAFILE)
+data: get_average_thresh.py get_average_blur.py $(DATAFILE)
 	python3 get_average_thresh.py > result/thres/result.txt
+	python3 get_average_blur.py > result/blur/result.txt
 
-plot: data thresh.p
+plot: data thresh.p blur.p
 	python3 gen_thres_dat.py
+	python3 gen_blur_dat.py
 	gnuplot thresh.p
+	gnuplot blur.p
 
 clean:
 	rm -f lab1.aux lab1.log lab1.toc
 
 cleanall:
-	rm -f lab1.pdf result/thres/result.txt result/thres/result.dat threshold.png
+	rm -f lab1.pdf result/thres/result.txt result/thres/result.dat threshold.png blur_4.png blur_8.png blur_16.png blur_32.png
