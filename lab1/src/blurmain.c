@@ -69,22 +69,22 @@ int main (int argc, char ** argv)
                         exit_prog(src, 1);
                 }
                 
-                /* printf("Has read the image, generating coefficients\n"); */
+                // Calculate gauss weights
                 get_gauss_weights(radius, w);
 
-                /* printf("Calling filter\n"); */
         } 
 
         start_time = MPI_Wtime();
 
+        // MPI broadcasts
         MPI_Bcast(w, MAX_RAD, MPI_DOUBLE, 0, MPI_COMM_WORLD);
         MPI_Bcast(&radius, 1, MPI_INT, 0, MPI_COMM_WORLD);
         MPI_Bcast(&xsize, 1, MPI_INT, 0, MPI_COMM_WORLD);
         MPI_Bcast(&ysize, 1, MPI_INT, 0, MPI_COMM_WORLD);
 
+        // Calculate local number of rows
         l_ysize = ysize/n;
         remain_ysize = ysize % n;
-        /* printf("ysize = %d, l_ysize= %d, remain_ysize = %d\n", ysize, l_ysize, remain_ysize); */
         pixel *lsrc;
         if( myid == n-1){
                 // Handle remaining rows due to integer division
@@ -98,6 +98,7 @@ int main (int argc, char ** argv)
                         MPI_BYTE, 0, MPI_COMM_WORLD);
 
         if(n == 1){
+                // If one process no communication
                 // Blur the pixels with respect to pixels on x-axis
                 blurfilter_x(xsize, ysize, lsrc + radius*xsize, radius, w);
                 blurfilter_y(xsize, ysize, lsrc + radius*xsize, radius, w, 0, 0);
@@ -112,7 +113,7 @@ int main (int argc, char ** argv)
                         // Blur the pixels with respect to pixels on x-axis
                         blurfilter_x(xsize, l_ysize, lsrc+radius*xsize, radius, w);
 
-                        // First process only recieves shadow pixels from pixels of process "below"
+                        // First process only receives shadow pixels from pixels of process "below"
                         MPI_Recv(lsrc+(radius+l_ysize)*xsize, sizeof(pixel)*xsize*radius,
                                         MPI_BYTE, myid+1, 10, MPI_COMM_WORLD, &status);
                         // First process only send pixels to shadow pixels of process "below"
@@ -122,13 +123,13 @@ int main (int argc, char ** argv)
                         // Blur the pixels with respect to pixels on y-axis
                         blurfilter_y(xsize, l_ysize, lsrc+radius*xsize, radius, w, 0, 1);
 
-                        // Recieve filtered remaining rows from last process
+                        // Receive filtered remaining rows from last process
                         MPI_Recv(src+n*l_ysize*xsize,
                                         sizeof(pixel)*remain_ysize*xsize,
                                         MPI_BYTE, n-1, 30, MPI_COMM_WORLD, &status);
 
                 } else if(myid == n-1){
-                        // Recieve remaining rows from first process
+                        // Receive remaining rows from first process
                         MPI_Recv(lsrc+(radius+l_ysize)*xsize,
                                         sizeof(pixel)*remain_ysize*xsize,
                                         MPI_BYTE, 0, 30, MPI_COMM_WORLD,
@@ -140,7 +141,7 @@ int main (int argc, char ** argv)
                         // Last process only sends pixels to shadow pixels of process "above"
                         MPI_Send(lsrc+radius*xsize, sizeof(pixel)*xsize*radius,
                                         MPI_BYTE, myid-1, 10, MPI_COMM_WORLD);
-                        // Last process only recieves shadow pixels from pixels of process "above"
+                        // Last process only receives shadow pixels from pixels of process "above"
                         MPI_Recv(lsrc, sizeof(pixel)*xsize*radius,
                                         MPI_BYTE, myid-1, 20, MPI_COMM_WORLD, &status);
 
@@ -184,9 +185,6 @@ int main (int argc, char ** argv)
 
         if(myid == 0){
                 printf("Filtering took: %g secs\n", (end_time - start_time));
-
-                /* write result */
-                /* printf("Writing output file\n"); */
 
                 if(write_ppm (argv[3], xsize, ysize, (char *)src) != 0){
                         exit_prog(src, 1);

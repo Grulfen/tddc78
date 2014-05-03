@@ -26,6 +26,8 @@ pixel* pix(pixel* image, const int xx, const int yy, const int xsize)
 void blurfilter_x(const int xsize, const int ysize, pixel* src, const int radius, const double *w){
         int x,y,x2, wi;
         double r,g,b,n, wc;
+
+        // Use malloc to avoid stack overflow
         pixel *dst = (pixel*) malloc(sizeof(pixel)*MAX_PIXELS);
 
 
@@ -57,13 +59,18 @@ void blurfilter_x(const int xsize, const int ysize, pixel* src, const int radius
                         pix(dst,x,y, xsize)->b = b/n;
                 }
         }
+
+        // Copy filtered data to src pointer
         memcpy(src,dst, xsize*ysize*sizeof(pixel));
         free(dst);
 }
 
+// shadow_up and shadow_down indicate if there are shadow pixels above or below
+// respectively. 0 indicates no shadow elements and 1 indicates shadow elements
 void blurfilter_y(const int xsize, const int ysize, pixel* src, const int radius, const double *w, int shadow_up, int shadow_down){
         int x,y,y2, wi;
         double r,g,b,n, wc;
+        // Use malloc to avoid stack overflow
         pixel *dst = (pixel*) malloc(sizeof(pixel)*MAX_PIXELS);
         for (y=0; y<ysize; y++) {
                 for (x=0; x<xsize; x++) {
@@ -74,6 +81,9 @@ void blurfilter_y(const int xsize, const int ysize, pixel* src, const int radius
                         for ( wi=1; wi <= radius; wi++) {
                                 wc = w[wi];
                                 y2 = y - wi;
+                                // If there is shadow elements above, use them
+                                // in filtering. (Can be elements before
+                                // src pointer
                                 if(y2 >= -radius*shadow_up) {
                                         r += wc * pix(src, x, y2, xsize)->r;
                                         g += wc * pix(src, x, y2, xsize)->g;
@@ -81,6 +91,9 @@ void blurfilter_y(const int xsize, const int ysize, pixel* src, const int radius
                                         n += wc;
                                 }
                                 y2 = y + wi;
+                                // If there is shadow elements below, use them
+                                // in filtering. (Can be elements after 
+                                // src pointer + xsize*ysize
                                 if(y2 < ysize + radius*shadow_down) {
                                         r += wc * pix(src, x, y2, xsize)->r;
                                         g += wc * pix(src, x, y2, xsize)->g;
@@ -93,6 +106,8 @@ void blurfilter_y(const int xsize, const int ysize, pixel* src, const int radius
                         pix(dst,x,y, xsize)->b = b/n;
                 }
         }
-        memcpy(src,dst, xsize*ysize*sizeof(pixel));
+
+        // Copy filtered data to src pointer
+        memcpy(src, dst, xsize*ysize*sizeof(pixel));
         free(dst);
 }

@@ -50,7 +50,6 @@ int main (int argc, char ** argv) {
                         fprintf(stderr, "Too large maximum color-component value\n");
                         exit_prog(src, 1);
                 }
-                /* printf("%d: Has read the image, calling filter\n", myid); */
                 size = xsize*ysize;
         }
 
@@ -63,7 +62,6 @@ int main (int argc, char ** argv) {
 
         // Local part of image
         pixel *lsrc = (pixel*) malloc(sizeof(pixel)*lsize);
-        /* pixel lsrc[lsize]; */
 
         // Scatter total image to multiple smaller parts for each process
         MPI_Scatter(src, sizeof(pixel)*lsize, MPI_BYTE, lsrc,
@@ -90,9 +88,6 @@ int main (int argc, char ** argv) {
 
         if(myid == 0){
                 printf("Filtering took: %g secs\n", (end_time - start_time));
-
-                /* write result */
-                /* printf("Writing output file\n"); */
 
                 if(write_ppm (argv[2], xsize, ysize, (char *)src) != 0){
                         exit_prog(src, 1);

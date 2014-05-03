@@ -14,6 +14,9 @@ typedef struct _pixel {
 } pixel;
 
 void blurfilter_x(const int xsize, const int ysize, pixel* src, const int radius, const double *w);
+
+// shadow_up and shadow_down indicate if there are shadow pixels above or below
+// respectively. 0 indicates no shadow elements and 1 indicates shadow elements
 void blurfilter_y(const int xsize, const int ysize, pixel* src, const int radius, const double *w, int shadow_up, int shadow_down);
 
 #endif
