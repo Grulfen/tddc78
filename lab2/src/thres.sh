@@ -1,4 +1,8 @@
 #!/bin/bash
+#SBATCH -J thres
+#SBATCH -t 02:00:00
+#SBATCH -N 1
+#SBATCH --exclusive
 
 for THREADS in {1..20}
 do
