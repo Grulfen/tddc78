@@ -1,0 +1,121 @@
+
+Image 1 - 9
+
+Has read the image, calling filter
+Filtering took: 0.000920743 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.000916919 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00101978 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.000892907 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.000889919 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00099296 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00086496 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.000880451 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.000930128 secs
+Writing output file
+
+Image 2 - 9
+
+Has read the image, calling filter
+Filtering took: 0.00134186 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00133614 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00138301 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00134843 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00136656 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00134836 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00136092 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00164085 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.0013927 secs
+Writing output file
+
+Image 3 - 9
+
+Has read the image, calling filter
+Filtering took: 0.0021732 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00220342 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00220482 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.0021717 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.0022277 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00214754 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00214513 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.0021754 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00216343 secs
+Writing output file
+
+Image 4 - 9
+
+Has read the image, calling filter
+Filtering took: 0.00879647 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.0091359 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00915979 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.0089466 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00894089 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00891801 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.0098019 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00898194 secs
+Writing output file
+Has read the image, calling filter
+Filtering took: 0.00891719 secs
+Writing output file
+

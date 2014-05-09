@@ -71,6 +71,7 @@ void* blurfilter_x(void* p)
 			pix(dst,x,y, xsize)->b = b/n;
 		}
 	}
+        return NULL;
 }
 
 // Filter along y-axis
@@ -124,4 +125,5 @@ void* blurfilter_y(void* p){
                         pix(dst,x,y, xsize)->b = b/n;
                 }
         }
+        return NULL;
 }
