@@ -1,0 +1,481 @@
+
+Image 1 - 9 runs radius 4
+
+Calling filter
+Filtering took: 0.0222294 secs
+Writing output file
+Calling filter
+Filtering took: 0.0221169 secs
+Writing output file
+Calling filter
+Filtering took: 0.0222312 secs
+Writing output file
+Calling filter
+Filtering took: 0.0221992 secs
+Writing output file
+Calling filter
+Filtering took: 0.0223846 secs
+Writing output file
+Calling filter
+Filtering took: 0.0221976 secs
+Writing output file
+Calling filter
+Filtering took: 0.0220176 secs
+Writing output file
+Calling filter
+Filtering took: 0.0220682 secs
+Writing output file
+Calling filter
+Filtering took: 0.0220513 secs
+Writing output file
+
+Image 1 - 9 runs radius 8
+
+Calling filter
+Filtering took: 0.040502 secs
+Writing output file
+Calling filter
+Filtering took: 0.040316 secs
+Writing output file
+Calling filter
+Filtering took: 0.0403516 secs
+Writing output file
+Calling filter
+Filtering took: 0.0404749 secs
+Writing output file
+Calling filter
+Filtering took: 0.0403392 secs
+Writing output file
+Calling filter
+Filtering took: 0.0402638 secs
+Writing output file
+Calling filter
+Filtering took: 0.040351 secs
+Writing output file
+Calling filter
+Filtering took: 0.0404034 secs
+Writing output file
+Calling filter
+Filtering took: 0.0404621 secs
+Writing output file
+
+Image 1 - 9 runs radius 16
+
+Calling filter
+Filtering took: 0.0747165 secs
+Writing output file
+Calling filter
+Filtering took: 0.0750299 secs
+Writing output file
+Calling filter
+Filtering took: 0.0747633 secs
+Writing output file
+Calling filter
+Filtering took: 0.0750305 secs
+Writing output file
+Calling filter
+Filtering took: 0.0751648 secs
+Writing output file
+Calling filter
+Filtering took: 0.0747989 secs
+Writing output file
+Calling filter
+Filtering took: 0.0749594 secs
+Writing output file
+Calling filter
+Filtering took: 0.0751823 secs
+Writing output file
+Calling filter
+Filtering took: 0.0747745 secs
+Writing output file
+
+Image 1 - 9 runs radius 32
+
+Calling filter
+Filtering took: 0.141221 secs
+Writing output file
+Calling filter
+Filtering took: 0.140758 secs
+Writing output file
+Calling filter
+Filtering took: 0.141192 secs
+Writing output file
+Calling filter
+Filtering took: 0.140912 secs
+Writing output file
+Calling filter
+Filtering took: 0.140995 secs
+Writing output file
+Calling filter
+Filtering took: 0.141037 secs
+Writing output file
+Calling filter
+Filtering took: 0.140983 secs
+Writing output file
+Calling filter
+Filtering took: 0.141269 secs
+Writing output file
+Calling filter
+Filtering took: 0.140919 secs
+Writing output file
+
+Image 2 - 9 runs radius 4
+
+Calling filter
+Filtering took: 0.0381713 secs
+Writing output file
+Calling filter
+Filtering took: 0.0380326 secs
+Writing output file
+Calling filter
+Filtering took: 0.0380885 secs
+Writing output file
+Calling filter
+Filtering took: 0.0381221 secs
+Writing output file
+Calling filter
+Filtering took: 0.0379735 secs
+Writing output file
+Calling filter
+Filtering took: 0.0381024 secs
+Writing output file
+Calling filter
+Filtering took: 0.0380493 secs
+Writing output file
+Calling filter
+Filtering took: 0.0380602 secs
+Writing output file
+Calling filter
+Filtering took: 0.03812 secs
+Writing output file
+
+Image 2 - 9 runs radius 8
+
+Calling filter
+Filtering took: 0.0696142 secs
+Writing output file
+Calling filter
+Filtering took: 0.0698309 secs
+Writing output file
+Calling filter
+Filtering took: 0.0696543 secs
+Writing output file
+Calling filter
+Filtering took: 0.0699523 secs
+Writing output file
+Calling filter
+Filtering took: 0.0696938 secs
+Writing output file
+Calling filter
+Filtering took: 0.0700163 secs
+Writing output file
+Calling filter
+Filtering took: 0.0699506 secs
+Writing output file
+Calling filter
+Filtering took: 0.0695662 secs
+Writing output file
+Calling filter
+Filtering took: 0.0699433 secs
+Writing output file
+
+Image 2 - 9 runs radius 16
+
+Calling filter
+Filtering took: 0.129892 secs
+Writing output file
+Calling filter
+Filtering took: 0.129891 secs
+Writing output file
+Calling filter
+Filtering took: 0.129967 secs
+Writing output file
+Calling filter
+Filtering took: 0.130226 secs
+Writing output file
+Calling filter
+Filtering took: 0.130129 secs
+Writing output file
+Calling filter
+Filtering took: 0.129905 secs
+Writing output file
+Calling filter
+Filtering took: 0.129826 secs
+Writing output file
+Calling filter
+Filtering took: 0.130081 secs
+Writing output file
+Calling filter
+Filtering took: 0.130015 secs
+Writing output file
+
+Image 2 - 9 runs radius 32
+
+Calling filter
+Filtering took: 0.247547 secs
+Writing output file
+Calling filter
+Filtering took: 0.248372 secs
+Writing output file
+Calling filter
+Filtering took: 0.247243 secs
+Writing output file
+Calling filter
+Filtering took: 0.247957 secs
+Writing output file
+Calling filter
+Filtering took: 0.246885 secs
+Writing output file
+Calling filter
+Filtering took: 0.246314 secs
+Writing output file
+Calling filter
+Filtering took: 0.248099 secs
+Writing output file
+Calling filter
+Filtering took: 0.246609 secs
+Writing output file
+Calling filter
+Filtering took: 0.24865 secs
+Writing output file
+
+Image 3 - 9 runs radius 4
+
+Calling filter
+Filtering took: 0.0657022 secs
+Writing output file
+Calling filter
+Filtering took: 0.0658813 secs
+Writing output file
+Calling filter
+Filtering took: 0.0656837 secs
+Writing output file
+Calling filter
+Filtering took: 0.0662103 secs
+Writing output file
+Calling filter
+Filtering took: 0.0656572 secs
+Writing output file
+Calling filter
+Filtering took: 0.066036 secs
+Writing output file
+Calling filter
+Filtering took: 0.0660453 secs
+Writing output file
+Calling filter
+Filtering took: 0.0656131 secs
+Writing output file
+Calling filter
+Filtering took: 0.06594 secs
+Writing output file
+
+Image 3 - 9 runs radius 8
+
+Calling filter
+Filtering took: 0.121217 secs
+Writing output file
+Calling filter
+Filtering took: 0.121584 secs
+Writing output file
+Calling filter
+Filtering took: 0.121365 secs
+Writing output file
+Calling filter
+Filtering took: 0.121466 secs
+Writing output file
+Calling filter
+Filtering took: 0.121465 secs
+Writing output file
+Calling filter
+Filtering took: 0.121352 secs
+Writing output file
+Calling filter
+Filtering took: 0.121395 secs
+Writing output file
+Calling filter
+Filtering took: 0.121334 secs
+Writing output file
+Calling filter
+Filtering took: 0.121514 secs
+Writing output file
+
+Image 3 - 9 runs radius 16
+
+Calling filter
+Filtering took: 0.227251 secs
+Writing output file
+Calling filter
+Filtering took: 0.227295 secs
+Writing output file
+Calling filter
+Filtering took: 0.227015 secs
+Writing output file
+Calling filter
+Filtering took: 0.227194 secs
+Writing output file
+Calling filter
+Filtering took: 0.227359 secs
+Writing output file
+Calling filter
+Filtering took: 0.227388 secs
+Writing output file
+Calling filter
+Filtering took: 0.227434 secs
+Writing output file
+Calling filter
+Filtering took: 0.227343 secs
+Writing output file
+Calling filter
+Filtering took: 0.227201 secs
+Writing output file
+
+Image 3 - 9 runs radius 32
+
+Calling filter
+Filtering took: 0.440603 secs
+Writing output file
+Calling filter
+Filtering took: 0.441061 secs
+Writing output file
+Calling filter
+Filtering took: 0.440453 secs
+Writing output file
+Calling filter
+Filtering took: 0.440727 secs
+Writing output file
+Calling filter
+Filtering took: 0.440477 secs
+Writing output file
+Calling filter
+Filtering took: 0.440919 secs
+Writing output file
+Calling filter
+Filtering took: 0.44072 secs
+Writing output file
+Calling filter
+Filtering took: 0.4406 secs
+Writing output file
+Calling filter
+Filtering took: 0.44127 secs
+Writing output file
+
+Image 4 - 9 runs radius 4
+
+Calling filter
+Filtering took: 0.306198 secs
+Writing output file
+Calling filter
+Filtering took: 0.306227 secs
+Writing output file
+Calling filter
+Filtering took: 0.306598 secs
+Writing output file
+Calling filter
+Filtering took: 0.306341 secs
+Writing output file
+Calling filter
+Filtering took: 0.322328 secs
+Writing output file
+Calling filter
+Filtering took: 0.306318 secs
+Writing output file
+Calling filter
+Filtering took: 0.306334 secs
+Writing output file
+Calling filter
+Filtering took: 0.306653 secs
+Writing output file
+Calling filter
+Filtering took: 0.306422 secs
+Writing output file
+
+Image 4 - 9 runs radius 8
+
+Calling filter
+Filtering took: 0.566823 secs
+Writing output file
+Calling filter
+Filtering took: 0.566771 secs
+Writing output file
+Calling filter
+Filtering took: 0.567438 secs
+Writing output file
+Calling filter
+Filtering took: 0.566546 secs
+Writing output file
+Calling filter
+Filtering took: 0.566875 secs
+Writing output file
+Calling filter
+Filtering took: 0.571238 secs
+Writing output file
+Calling filter
+Filtering took: 0.566215 secs
+Writing output file
+Calling filter
+Filtering took: 0.566928 secs
+Writing output file
+Calling filter
+Filtering took: 0.567051 secs
+Writing output file
+
+Image 4 - 9 runs radius 16
+
+Calling filter
+Filtering took: 1.06484 secs
+Writing output file
+Calling filter
+Filtering took: 1.06476 secs
+Writing output file
+Calling filter
+Filtering took: 1.06414 secs
+Writing output file
+Calling filter
+Filtering took: 1.06375 secs
+Writing output file
+Calling filter
+Filtering took: 1.06382 secs
+Writing output file
+Calling filter
+Filtering took: 1.06514 secs
+Writing output file
+Calling filter
+Filtering took: 1.06478 secs
+Writing output file
+Calling filter
+Filtering took: 1.06502 secs
+Writing output file
+Calling filter
+Filtering took: 1.06458 secs
+Writing output file
+
+Image 4 - 9 runs radius 32
+
+Calling filter
+Filtering took: 2.07202 secs
+Writing output file
+Calling filter
+Filtering took: 2.07215 secs
+Writing output file
+Calling filter
+Filtering took: 2.07228 secs
+Writing output file
+Calling filter
+Filtering took: 2.07131 secs
+Writing output file
+Calling filter
+Filtering took: 2.0729 secs
+Writing output file
+Calling filter
+Filtering took: 2.07191 secs
+Writing output file
+Calling filter
+Filtering took: 2.07167 secs
+Writing output file
+Calling filter
+Filtering took: 2.0716 secs
+Writing output file
+Calling filter
+Filtering took: 2.07297 secs
+Writing output file
+
