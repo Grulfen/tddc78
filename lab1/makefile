@@ -16,7 +16,7 @@ DATAFILE= result/thres/batch_thres_1.txt\
 	  result/thres/batch_thres_15.txt\
 	  result/thres/batch_thres_16.txt
 
-rapport: lab1.tex
+rapport: plot lab1.tex
 	pdflatex lab1.tex
 	pdflatex lab1.tex
 	pdflatex lab1.tex
