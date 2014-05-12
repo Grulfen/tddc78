@@ -1,0 +1,188 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{listings}
+
+\lstset{language=c}
+
+\pagestyle{fancy}
+\lhead{TDDC78 Lab 2}
+\rhead{Hallberg, Svensk}
+
+\begin{document}
+
+\title{TDDC78 Lab 1\\
+        Image filter - MPI}
+\author{Christopher Hallberg \\
+        Gustav Svensk}
+\maketitle
+
+\thispagestyle{empty}
+
+\newpage
+\setcounter{page}{1}
+\tableofcontents
+\newpage
+
+\section{Averaging Filter}
+In the averaging filter each pixel gets its value according to a weighted average
+of neighbouring pixels in the shape of a rectangle with a user specified radius. 
+Our implementation uses the given Gaussian distribution.
+
+\subsection{Description}
+\label{sec:desc}
+This section provides a high level overview of the parallel program. 
+The code is of the same structure as the one provided on the course homepage,
+but with added functionality for pthreads.
+
+When the program is started the main thread allocates memory for the input image
+and the resulting image and then reads the input file and calls the function
+calculating the Gaussian coefficients. 
+
+%%
+% OLD REPORT
+%%
+In order to utilize the cache functionality as much as possible we split the image
+horizontally in equally sized parts. If the y-size of the image is not divisible
+by the number of processors used the last processor will be assigned the
+additional lines. Each processor will allocate local memory for their part of the
+image plus extra shadow pixels needed to filter along the y-axis. The memory
+needed for these shadow pixels will correspond to two times the width of the
+image times the radius of the filtering rectangle. The root processor then 
+scatters the image to every processor.  
+
+The filter function provided have been split into two separate functions, the
+first filtering along the x-axis and the other filtering along the y-axis. Some
+small changes had to be made to copy memory and handle the shadow pixels. The
+y-filter have two additional arguments specifying if the process will need
+information about shadow pixels from another process or not. 
+
+If there is only one process it will just call the two filter functions. If
+there are more than one process the root process first sends the part of the
+image left over after the integer division to the last process. All processes
+filter along the x-axis which require no message passing between them.
+The required shadow pixels are then passed, starting by first sending "upward"
+then "downward". The y-filter is called by each process with the arguments 
+corresponding to the position in the image. 
+
+Passing the filtered image back to the root process is done by the last process 
+first sending the filtered left over part from the integer division. The main
+part of the image is passed back using the gather function.
+The root then writes the image back to a file.
+ 
+
+\subsection{Performance}
+The execution time is measured using the MPI\_Wtime() function. It is started
+after the root processor has calculated the Gaussian
+coefficients and is ended before the root processor writes the output file.
+The execution times are measured by running the program nine times and removing the
+first result to eliminate cache effects. The results can be seen in the figures
+\ref{fig:blur_4}, \ref{fig:blur_8}, \ref{fig:blur_16} and \ref{fig:blur_32} in
+appendix \ref{sec:fig_aver}.
+
+The first thing to note is that the greatest improvement due to parallelization
+can be seen when increasing the number of processes when the number of processes
+is low. When using many processes the improvement of adding more processes is
+very small. The curves flattens out at around 35 processes, this is due to the
+overhead of more processes is as big as the parallelization gain.
+
+There is a strange peak at seven processes that we do not know the cause of. We don't
+know if this is due to out algorithm or due to the scheduler at NSC.
+The percental performance increase is very similar across image sizes and radii.
+The performance increase for images 2, 3 and 4 is very big from one process to
+two and three to four but not as big from two to three. This is not true for image 1. This is
+because the number of rows in image 1 is not divisible by two or 4.
+
+\subsection{Source}
+
+The source code can be found in the attached source code files.
+The functionality of the code is described in section \ref{sec:desc} and in the
+comments in the source code.
+
+\section{Threshold Filter}
+The threshold filter computes the average intensity of the image and then use
+this as a threshold value.
+
+\subsection{Description}
+\label{sec:desc2}
+The parallelized code keeps the basic structure of the example code provided on
+the course homepage and the parallelization is done in a straightforward
+fashion. As in the averaging filter the image is split horizontally, but in this
+implementation the root process takes care of the part remaining after the
+integer division.
+
+The filter function has been split into two separate functions, one calculating the threshold
+value and one doing the filtering.
+
+When starting the execution the root process reads the image followed by a
+broadcast of the total size. Each process then allocate memory for its slice of
+the image. After the root process has scattered the image, the processes
+calculate a threshold value for their local part followed by an all reduce
+function to add all local values together to a global threshold.
+
+All processes then runs the filter on their local part, with the root
+calculating a slightly larger portion. The gather function is used to pass the
+filtered image back to the root process, which writes back to file.
+
+\subsection{Performance}
+
+The execution time is measured using the MPI\_Wtime() function. It is started
+after the root processor has read the input file
+and is ended before writing the output file.
+
+The results can be found in figure \ref{fig:thres} in appendix
+\ref{sec:fig_thres}. As in the averaging filter the performance improvement is
+greater in the beginning. The calculations required in the threshold filter are
+fewer than in the averaging filter, so the best performance is found at a
+relatively low number of processes. For the largest image the curve flattens
+out around eight processes and we get lower performance when adding more. For
+the smaller images this takes place at around four to five processes and the
+percental worsening after that is greater than for the large image.
+
+\subsection{Source}
+
+The source code can be found in the attached source code files.
+The functionality of the code is described in section \ref{sec:desc2} and in the
+comments in the source code.
+
+\newpage
+\appendix
+\section{Figures - Averaging}
+\label{sec:fig_aver}
+
+\begin{figure}[hb]
+        \centering
+        \includegraphics[width=0.8\textwidth]{blur_4.png}
+        \caption{Averaging filter with radius 4}
+        \label{fig:blur_4}
+\end{figure}
+\begin{figure}[hb]
+        \centering
+        \includegraphics[width=0.8\textwidth]{blur_8.png}
+        \caption{Averaging filter with radius 8}
+        \label{fig:blur_8}
+\end{figure}
+\begin{figure}[hb]
+        \centering
+        \includegraphics[width=0.8\textwidth]{blur_16.png}
+        \caption{Averaging filter with radius 16}
+        \label{fig:blur_16}
+\end{figure}
+\begin{figure}[hb]
+        \centering
+        \includegraphics[width=0.8\textwidth]{blur_32.png}
+        \caption{Averaging filter with radius 32}
+        \label{fig:blur_32}
+\end{figure}
+\clearpage
+\section{Figures - Threshold}
+\label{sec:fig_thres}
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.8\textwidth]{threshold.png}
+        \caption{Threshold filter}
+        \label{fig:thres}
+\end{figure}
+
+\end{document}
