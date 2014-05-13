@@ -6,15 +6,15 @@ use omp_lib
 ! Written by Fredrik Berntsson (frber@math.liu.se) March 2003
 ! Modified by Berkant Savas (besav@math.liu.se) April 2006
 !-----------------------------------------------------------------------
-  integer, parameter                  :: n=100, maxiter=1000
+  integer, parameter                  :: n=1000, maxiter=1000
   double precision,parameter          :: tol=1.0E-3
   double precision,dimension(0:n+1,0:n+1) :: T
   double precision,dimension(n)       :: tmp_left,tmp_mid,tmp_right,tmp_last
   double precision                    :: error,x
   double precision                    :: t1,t0
-  integer                             :: j,k
+  integer                             :: j,k, num_threads
   integer                             :: myid, team_size, even_cols, my_cols
-  character(len=20)                   :: str
+  character(len=20)                   :: str, arg
   
   ! Set boundary conditions and initial values for the unknowns
   T=0.0D0
@@ -22,6 +22,9 @@ use omp_lib
   T(0:n+1 , n+1)   = 1.0D0
   T(n+1   , 0:n+1) = 2.0D0
   
+  call getarg(1, arg)
+  read(arg, '(i10)' ) num_threads
+  call omp_set_num_threads(num_threads)
 
   ! Solve the linear system of equations using the Jacobi method
   t0 = omp_get_wtime()
