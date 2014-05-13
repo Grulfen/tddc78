@@ -8,8 +8,8 @@ LFLAGS = -lm -Nmpi
 
 all: $(EXE)
 
-lab4: physics.o
-	$(CC) $^ -o $@
+lab4: $(BIN)/lab4.o $(BIN)/physics.o
+	$(CC) $^ $(LFLAGS) -o $@
 
 $(BIN)/%.o: %.c
-	$(CC) -c $^ -o $@
+	$(CC) $(CFLAGS) -c $^ -o $@
