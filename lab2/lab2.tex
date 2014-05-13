@@ -3,7 +3,8 @@
 \usepackage{fancyhdr}
 \usepackage{listings}
 
-\lstset{language=c}
+\lstset{language=c,
+        basicstyle=\ttfamily\scriptsize}
 
 \pagestyle{fancy}
 \lhead{TDDC78 Lab 2}
@@ -11,8 +12,8 @@
 
 \begin{document}
 
-\title{TDDC78 Lab 1\\
-        Image filter - MPI}
+\title{TDDC78 Lab 2\\
+        Image filter - pthreads}
 \author{Christopher Hallberg \\
         Gustav Svensk}
 \maketitle
@@ -99,49 +100,82 @@ The source code can be found in the attached source code files.
 The functionality of the code is described in section \ref{sec:desc} and in the
 comments in the source code.
 
+
 \section{Threshold Filter}
 The threshold filter computes the average intensity of the image and then use
 this as a threshold value.
+
 
 \subsection{Description}
 \label{sec:desc2}
 The parallelized code keeps the basic structure of the example code provided on
 the course homepage and the parallelization is done in a straightforward
-fashion. As in the averaging filter the image is split horizontally, but in this
-implementation the root process takes care of the part remaining after the
-integer division.
+fashion. The pixels are divided horizontally to use the data locality, but it is
+the pixels and not the lines that are split (not the same as in the averaging
+filter). The last thread takes care of the part remaining after the integer
+division.
 
-The filter function has been split into two separate functions, one calculating the threshold
-value and one doing the filtering.
+The filter function has been split into two separate functions, one calculating
+the threshold value and one doing the filtering.
 
-When starting the execution the root process reads the image followed by a
-broadcast of the total size. Each process then allocate memory for its slice of
-the image. After the root process has scattered the image, the processes
-calculate a threshold value for their local part followed by an all reduce
-function to add all local values together to a global threshold.
+When starting the execution the main thread allocates memory for the image and
+then reads it. The main thread then calculates how many pixels each thread
+should filter and then spawns the threads that calculate the threshold value for
+their part of the image. After that the main threads joins with all the threads
+and add their threshold value to the global threshold value.
 
-All processes then runs the filter on their local part, with the root
-calculating a slightly larger portion. The gather function is used to pass the
-filtered image back to the root process, which writes back to file.
+New threads are then spawned to filter their part of the image. The main thread
+then joins with all the threads and the filtering is finished. The filtered
+image is then written to a file.
 
 \subsection{Performance}
 
-The execution time is measured using the MPI\_Wtime() function. It is started
-after the root processor has read the input file
-and is ended before writing the output file.
+The execution time is measured using the clock\_gettime() function. It is
+started after the main thread has read the input file and is ended before
+writing the output file.
+
+The filter is run with 16 processors
+
+%%
+% OLD REPORT
+%%
 
 The results can be found in figure \ref{fig:thres} in appendix
 \ref{sec:fig_thres}. As in the averaging filter the performance improvement is
-greater in the beginning. The calculations required in the threshold filter are
-fewer than in the averaging filter, so the best performance is found at a
-relatively low number of processes. For the largest image the curve flattens
-out around eight processes and we get lower performance when adding more. For
-the smaller images this takes place at around four to five processes and the
-percental worsening after that is greater than for the large image.
+greater in the beginning. We can see that the execution time decreases as we
+increase the number of threads. When using 17 threads the execution time
+increases, this is because we use 16 cores and one hardware thread per core. So
+then we have 17 threads there are more threads than hardware threads.
 
 \subsection{Source}
 
-The source code can be found in the attached source code files.
+The most interesting part of the source is where the pixels are divided among
+the threads, the data structs are initialized and the threads are spawned. 
+This part can be seen below.
+\begin{lstlisting}
+pix_p_thread = xsize*ysize/NUM_THREADS;
+
+for(i=0;i<NUM_THREADS;i++){
+        pdata[i] = malloc(sizeof(pixel_n));
+        pdata[i]->src = src + i*pix_p_thread;
+        pdata[i]->n = pix_p_thread;
+        if(i == NUM_THREADS - 1){
+                pdata[i]->n += xsize*ysize - pix_p_thread*NUM_THREADS;
+        }
+        pdata[i]->sum = malloc(sizeof(int));
+        *(pdata[i]->sum) = 0;
+        ret = pthread_create(&threads[i], NULL, threshold, (void*)pdata[i]);
+        if(ret) {
+                fprintf(stderr, "ERROR creating thread\n");
+                free(pdata[i]->sum);
+                free(pdata[i]);
+                free(src);
+                exit(-1);
+        }
+}
+\end{lstlisting}
+
+The rest of the source code can be found in the attached source code files.
 The functionality of the code is described in section \ref{sec:desc2} and in the
 comments in the source code.
 
