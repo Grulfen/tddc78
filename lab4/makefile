@@ -11,7 +11,7 @@ all: $(EXE)
 lab4: $(BIN)/lab4.o $(BIN)/physics.o
 	$(CC) $^ $(LFLAGS) -o $@
 
-$(BIN)/%.o: %.c
+$(BIN)/%.o: %.cc
 	$(CC) $(CFLAGS) -c $^ -o $@
 
 clean:
