@@ -79,15 +79,16 @@ int main(int argc, char** argv)
         MPI_Cart_coords(grid, myid, 2, coords);
         cout << "Myid: " << myid << " My coords: (" << coords[0] << ", " << coords[1] << ") " << endl;
 
-        float collision_time, g_pressure = 0.0;
+        float collision_time, l_pressure = 0.0;
+        float g_pressure = 0.0;
         // Set walls for each process
-        cord_t wall = {0.0, BOX_HORIZ_SIZE*BOX_HORIZ_SIZE/size, 0.0, BOX_VERT_SIZE*BOX_VERT_SIZE/size};
-        /* srand(time(NULL)); */
+        cord_t wall = {0.0, float(BOX_HORIZ_SIZE*BOX_HORIZ_SIZE)/float(size), 0.0, float(BOX_VERT_SIZE*BOX_VERT_SIZE)/float(size)};
+        srand(time(NULL) + myid);
 
         list<pcord_t> particles, moved, comm_up, comm_down, comm_left, comm_right;
 
         // Will swap this with particles in time_step loop
-        moved = generate_particles(10000, 1);
+        moved = generate_particles(10, 1);
 
         for(int i=0;i<time_steps;i++){
                 particles.swap(moved);
@@ -126,12 +127,17 @@ int main(int argc, char** argv)
                         particles.erase(a++);
                 }
                 for(list<pcord_t>::iterator a = moved.begin();a != moved.end(); ++a){
-                        g_pressure += wall_collide(&(*a), wall);
+                        l_pressure += wall_collide(&(*a), wall);
                 }
         }
 
+        MPI_Reduce(&g_pressure, &l_pressure, 1, MPI_FLOAT, MPI_SUM, 0, MPI_COMM_WORLD);
+
+        if(myid == 0){
+            cout << "Pressure: " << g_pressure/time_steps/WALL_LENGTH << endl;
+        }
+
         MPI_Finalize();
-        cout << "Pressure: " << g_pressure/time_steps/WALL_LENGTH << endl;
 
         return 0;
 }
