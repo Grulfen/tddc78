@@ -9,6 +9,13 @@
 
 using namespace std;
 
+struct wall {
+    bool up{false};
+    bool right{false};
+    bool down{false};
+    bool left{false};
+};
+
 bool particle_sort(const pcord_t &a, const pcord_t &b)
 {
         return a.x < b.x;
@@ -42,8 +49,7 @@ int main(int argc, char** argv)
         int time_steps;
         // Indicating if there are walls
         // in order up, right, down, left
-        bool walls[4];
-
+        wall walls;
 
         // My coordinates in grid
         int coords[2];
@@ -77,7 +83,19 @@ int main(int argc, char** argv)
 
         MPI_Cart_create(MPI_COMM_WORLD, 2, dims, period, 0, &grid);
         MPI_Cart_coords(grid, myid, 2, coords);
-        cout << "Myid: " << myid << " My coords: (" << coords[0] << ", " << coords[1] << ") " << endl;
+
+        if(coords[0] == 0){
+            walls.left = true;
+        }
+        if(coords[0] == side-1){
+            walls.right = true;
+        }
+        if(coords[1] == 0){
+            walls.up = true;
+        }
+        if(coords[1] == side-1){
+            walls.down = true;
+        }
 
         float collision_time, l_pressure = 0.0;
         float g_pressure = 0.0;
@@ -88,7 +106,7 @@ int main(int argc, char** argv)
         list<pcord_t> particles, moved, comm_up, comm_down, comm_left, comm_right;
 
         // Will swap this with particles in time_step loop
-        moved = generate_particles(10, 1);
+        moved = generate_particles(10000, 1);
 
         for(int i=0;i<time_steps;i++){
                 particles.swap(moved);
