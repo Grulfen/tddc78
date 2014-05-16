@@ -140,7 +140,7 @@ int main(int argc, char** argv)
     direction dir;
     // Set walls for each process
     cord_t wall = {0.0, float(BOX_HORIZ_SIZE*BOX_HORIZ_SIZE)/float(size), 0.0, float(BOX_VERT_SIZE*BOX_VERT_SIZE)/float(size)};
-    /* srand(time(NULL) + myid); */
+    srand(time(NULL) + myid);
 
     vector<pcord_t> particles;
 
@@ -168,16 +168,6 @@ int main(int argc, char** argv)
             }
         }
 
-        /* for(int i = 0;i<size;i++){ */
-        /*     if(myid == i && time_step == 1){ */
-        /*         cout << myid << ": Before border check: " << particles.size() << endl; */
-        /*         cout << "Sized comm down: " << out_comm_buffers[DOWN].size() << endl; */
-        /*         cout << "Sized comm up: " << out_comm_buffers[UP].size() << endl; */
-        /*         cout << "Sized comm left: " << out_comm_buffers[LEFT].size() << endl; */
-        /*         cout << "Sized comm right: " << out_comm_buffers[RIGHT].size() << endl; */
-        /*     } */
-        /* } */
-
         MPI_Barrier(grid);
         // Check for wall collisions or border crossings
         vector<pcord_t>::iterator a = particles.begin();
@@ -191,21 +181,9 @@ int main(int argc, char** argv)
                 a++;
             } else {
                 out_comm_buffers[dir].push_back(*a);
-                particles.erase(a++);
+                a = particles.erase(a);
             }
         }
-
-        for(int i = 0;i<size;i++){
-            if(myid == i && time_step == 1){
-                cout << myid << ": After border check: " << particles.size() << endl;
-                cout << "Sized comm down: " << out_comm_buffers[DOWN].size() << endl;
-                cout << "Sized comm up: " << out_comm_buffers[UP].size() << endl;
-                cout << "Sized comm left: " << out_comm_buffers[LEFT].size() << endl;
-                cout << "Sized comm right: " << out_comm_buffers[RIGHT].size() << endl;
-            }
-            MPI_Barrier(grid);
-        }
-
 
         // Send and recv communication buffers to neighbours
         for(int i = UP; i<=LEFT;i++){
@@ -214,8 +192,6 @@ int main(int argc, char** argv)
                     out_comm_buffers[i].size()*sizeof(pcord_t), MPI_BYTE,
                     neighbours[i], i*10+1, grid); 
 
-            /* if(time_step == 1) */
-            /*     cout << "After: " << myid << ": timestep: " << time_step << " Direction: " << i << " Neighbour: " << neighbours[i] << endl; */
             // Probe down to get size of incoming buffer
             MPI_Probe(neighbours[(i+2)%4], i*10+1, grid, &status);
             MPI_Get_count(&status, MPI_BYTE, &in_comm_buffer_size);
@@ -229,7 +205,7 @@ int main(int argc, char** argv)
 
         MPI_Barrier(grid);
         for(int i=0;i<4;i++){
-            /* out_comm_buffers[i].clear(); */
+            out_comm_buffers[i].clear();
             for(vector<pcord_t>::iterator it = in_comm_buffers[i].begin(); it != in_comm_buffers[i].end(); it++){
                 particles.push_back(*it);
             }
