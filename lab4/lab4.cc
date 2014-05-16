@@ -11,7 +11,7 @@
 using namespace std;
 
 enum direction {
-    UP,DOWN,LEFT,RIGHT,INSIDE
+    UP,RIGHT,DOWN,LEFT,INSIDE
 };
 
 // Return the border that the particle has crossed or INSIDE
@@ -115,21 +115,21 @@ int main(int argc, char** argv)
     MPI_Cart_coords(grid, myid, 2, coords);
 
     // Get ranks of neighbours
-    MPI_Cart_shift(grid, 0, 1, &src, &(neighbours[RIGHT]));
-    MPI_Cart_shift(grid, 1, 1, &src, &(neighbours[DOWN]));
-    MPI_Cart_shift(grid, 0, -1, &src, &(neighbours[LEFT]));
-    MPI_Cart_shift(grid, 1, -1, &src, &(neighbours[UP]));
+    MPI_Cart_shift(grid, 0, 1, &src, &(neighbours[DOWN]));
+    MPI_Cart_shift(grid, 1, 1, &src, &(neighbours[RIGHT]));
+    MPI_Cart_shift(grid, 0, -1, &src, &(neighbours[UP]));
+    MPI_Cart_shift(grid, 1, -1, &src, &(neighbours[LEFT]));
 
-    if(coords[0] == 0){
+    if(coords[1] == 0){
         walls[LEFT] = true;
     } 
-    if(coords[0] == side-1){
+    if(coords[1] == side-1){
         walls[RIGHT] = true;
     }
-    if(coords[1] == 0){
+    if(coords[0] == 0){
         walls[UP] = true;
     }
-    if(coords[1] == side-1){
+    if(coords[0] == side-1){
         walls[DOWN]= true;
     }
 
@@ -138,14 +138,17 @@ int main(int argc, char** argv)
     direction dir;
     // Set walls for each process
     cord_t wall = {0.0, float(BOX_HORIZ_SIZE*BOX_HORIZ_SIZE)/float(size), 0.0, float(BOX_VERT_SIZE*BOX_VERT_SIZE)/float(size)};
-    srand(time(NULL) + myid);
+    /* srand(time(NULL) + myid); */
 
     list<pcord_t> particles, moved, comm_up, comm_down, comm_left, comm_right;
 
     // Will swap this with particles in time_step loop
-    moved = generate_particles(4, 1);
+    moved = generate_particles(1000, 1);
 
-    for(int i=0;i<time_steps;i++){
+    /* if(myid == 2) */
+    /*     cout << "Before collision" << moved.size() << endl; */
+
+    for(int time_step=0;time_step<time_steps;time_step++){
         particles.swap(moved);
 
         // While loops so we can remove elements on list as we iterate over it
@@ -173,6 +176,9 @@ int main(int argc, char** argv)
                 a++;
             }
         }
+        /* if(myid == 2) */
+        /*     cout << "After collision: moved: " << moved.size() << " particles: " << particles.size() << endl; */
+
         // Move all uncollided particles
         // move to the moved list
         a = particles.begin();
@@ -182,10 +188,14 @@ int main(int argc, char** argv)
             particles.erase(a++);
         }
 
-        // Check for wall collisions of border crossings
+        /* if(myid == 2) */
+        /*     cout << "After moved: moved: " << moved.size() << "particles: " << particles.size() << endl; */
+
+        // Check for wall collisions or border crossings
         a = moved.begin();
         while(a != moved.end()){
             dir = get_border(&(*a), wall);
+
             if(dir == INSIDE){
                 a++;
             } else if(walls[dir]) {
@@ -196,13 +206,23 @@ int main(int argc, char** argv)
                 moved.erase(a++);
             }
         }
+
+        /* if(myid == 2){ */
+        /*     cout << "After border check: moved: " << moved.size() << " particles: " << particles.size() << endl; */
+        /*     cout << "Sized comm down: " << out_comm_buffers[DOWN].size() << endl; */
+        /*     cout << "Sized comm up: " << out_comm_buffers[UP].size() << endl; */
+        /*     cout << "Sized comm left: " << out_comm_buffers[LEFT].size() << endl; */
+        /*     cout << "Sized comm right: " << out_comm_buffers[RIGHT].size() << endl; */
+        /* } */
+
         // Send and recv communication buffers to neighbours
         for(int i = UP; i<=LEFT;i++){
             // Send up
             MPI_Send(&(out_comm_buffers[i][0]),
                     out_comm_buffers[i].size()*sizeof(pcord_t), MPI_BYTE,
                     neighbours[i], i*10+1, grid); 
-            cout << myid << ": " << i << " Neighbour: " << neighbours[i] << endl;
+            /* cout << myid << ": " << i << " Neighbour: " << neighbours[i] << endl; */
+            out_comm_buffers[i].clear();
             // Probe down to get size of incoming buffer
             MPI_Probe(neighbours[(i+2)%4], i*10+1, grid, &status);
             MPI_Get_count(&status, MPI_BYTE, &in_comm_buffer_size);
@@ -213,12 +233,25 @@ int main(int argc, char** argv)
                     MPI_BYTE, neighbours[(i+2)%4], i*10+1, grid, &status);
 
         }
-        cout << in_comm_buffers[0].size() << endl;
-        cout << in_comm_buffers[1].size() << endl;
-        cout << in_comm_buffers[2].size() << endl;
-        cout << in_comm_buffers[3].size() << endl;
+
+
+        for(int i=0;i<4;i++){
+            for(vector<pcord_t>::iterator it = in_comm_buffers[i].begin(); it != in_comm_buffers[i].end(); it++){
+                moved.push_back(*it);
+            }
+        }
     }
 
+    for(int i=0;i<size;i++){
+        if(myid == i){
+            cout << myid << ": Sized moved: " << moved.size() << endl;
+            cout << myid << ": Sized comm down: " << in_comm_buffers[DOWN].size() << endl;
+            cout << myid << ": Sized comm up: " << in_comm_buffers[UP].size() << endl;
+            cout << myid << ": Sized comm left: " << in_comm_buffers[LEFT].size() << endl;
+            cout << myid << ": Sized comm right: " << in_comm_buffers[RIGHT].size() << endl;
+        }
+        MPI_Barrier(MPI_COMM_WORLD);
+    }
     MPI_Reduce(&l_pressure, &g_pressure, 1, MPI_FLOAT, MPI_SUM, 0, MPI_COMM_WORLD);
 
     if(myid == 0){
