@@ -2,11 +2,11 @@
 #include"coordinate.h"
 #include"definitions.h"
 #include<mpi.h>
-#include<list>
 #include<vector>
 #include<cstdlib>
 #include<iostream>
 #include<cmath>
+#include<algorithm>
 
 using namespace std;
 
@@ -38,9 +38,9 @@ bool particle_sort(const pcord_t &a, const pcord_t &b)
     return a.x < b.x;
 }
 
-list<pcord_t> generate_particles(int n, int num_processes)
+vector<pcord_t> generate_particles(int n, int num_processes)
 {
-    list<pcord_t> particles; 
+    vector<pcord_t> particles; 
     pcord_t tmp_part;
     float r, theta;
     for(int i=0;i<n;i++){
@@ -85,6 +85,7 @@ int main(int argc, char** argv)
 
     int src;
     int in_comm_buffer_size;
+    int num_particles;
 
     MPI_Comm_rank(MPI_COMM_WORLD, &myid);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
@@ -96,8 +97,8 @@ int main(int argc, char** argv)
     int dims[2] = {side, side};
 
     if(myid == 0){
-        if(argc != 2){
-            cerr << "Usage: lab4 time_steps" << endl;
+        if(argc != 3){
+            cerr << "Usage: lab4 time_steps num_particles" << endl;
             exit(1);
         } 
         if(side*side != size){
@@ -106,6 +107,7 @@ int main(int argc, char** argv)
         }
 
         time_steps = atoi(argv[1]);
+        num_particles = atoi(argv[2]);
     }
 
     // Broadcast time steps
@@ -140,60 +142,46 @@ int main(int argc, char** argv)
     cord_t wall = {0.0, float(BOX_HORIZ_SIZE*BOX_HORIZ_SIZE)/float(size), 0.0, float(BOX_VERT_SIZE*BOX_VERT_SIZE)/float(size)};
     /* srand(time(NULL) + myid); */
 
-    list<pcord_t> particles, moved, comm_up, comm_down, comm_left, comm_right;
+    vector<pcord_t> particles;
 
-    // Will swap this with particles in time_step loop
-    moved = generate_particles(1000, 1);
-
-    /* if(myid == 2) */
-    /*     cout << "Before collision" << moved.size() << endl; */
+    particles = generate_particles(10000, 1);
 
     for(int time_step=0;time_step<time_steps;time_step++){
-        particles.swap(moved);
 
-        // While loops so we can remove elements on list as we iterate over it
-        // Check for collisions, move collided particles to the moved list
-        list<pcord_t>::iterator a = particles.begin();
-        while(a != particles.end()){
-            list<pcord_t>::iterator b = particles.begin();
-            while(b != particles.end()){
-                // collide handles the case when a == b
+        // Check for collisions and move particles
+        for(vector<pcord_t>::iterator a = particles.begin(); a != particles.end() - 1; a++){
+            for(vector<pcord_t>::iterator b = a+1; b != particles.end(); b++){
                 collision_time = collide(&(*a),&(*b));
+                // Collision
                 if(collision_time != -1){
                     interact(&(*a), &(*b), collision_time);
-                    moved.push_back(*a);
-                    moved.push_back(*b);
-                    particles.erase(a++);
-                    if(a == b){
-                        a++;
-                    }
-                    particles.erase(b);
+                    swap(*(a+1), *(b));
+                    a++;
                     break;
-                } 
-                b++;
+                }
             }
-            if(collision_time == -1){
-                a++;
+            if(collision_time != -1){
+                if(a == particles.end())
+                    break;
+            } else {
+                feuler(&(*a), STEP_SIZE);
             }
         }
-        /* if(myid == 2) */
-        /*     cout << "After collision: moved: " << moved.size() << " particles: " << particles.size() << endl; */
 
-        // Move all uncollided particles
-        // move to the moved list
-        a = particles.begin();
-        while(a != particles.end()){
-            feuler(&(*a), STEP_SIZE);
-            moved.push_back(*a);
-            particles.erase(a++);
-        }
+        /* for(int i = 0;i<size;i++){ */
+        /*     if(myid == i && time_step == 1){ */
+        /*         cout << myid << ": Before border check: " << particles.size() << endl; */
+        /*         cout << "Sized comm down: " << out_comm_buffers[DOWN].size() << endl; */
+        /*         cout << "Sized comm up: " << out_comm_buffers[UP].size() << endl; */
+        /*         cout << "Sized comm left: " << out_comm_buffers[LEFT].size() << endl; */
+        /*         cout << "Sized comm right: " << out_comm_buffers[RIGHT].size() << endl; */
+        /*     } */
+        /* } */
 
-        /* if(myid == 2) */
-        /*     cout << "After moved: moved: " << moved.size() << "particles: " << particles.size() << endl; */
-
+        MPI_Barrier(grid);
         // Check for wall collisions or border crossings
-        a = moved.begin();
-        while(a != moved.end()){
+        vector<pcord_t>::iterator a = particles.begin();
+        while(a != particles.end()){
             dir = get_border(&(*a), wall);
 
             if(dir == INSIDE){
@@ -203,17 +191,21 @@ int main(int argc, char** argv)
                 a++;
             } else {
                 out_comm_buffers[dir].push_back(*a);
-                moved.erase(a++);
+                particles.erase(a++);
             }
         }
 
-        /* if(myid == 2){ */
-        /*     cout << "After border check: moved: " << moved.size() << " particles: " << particles.size() << endl; */
-        /*     cout << "Sized comm down: " << out_comm_buffers[DOWN].size() << endl; */
-        /*     cout << "Sized comm up: " << out_comm_buffers[UP].size() << endl; */
-        /*     cout << "Sized comm left: " << out_comm_buffers[LEFT].size() << endl; */
-        /*     cout << "Sized comm right: " << out_comm_buffers[RIGHT].size() << endl; */
-        /* } */
+        for(int i = 0;i<size;i++){
+            if(myid == i && time_step == 1){
+                cout << myid << ": After border check: " << particles.size() << endl;
+                cout << "Sized comm down: " << out_comm_buffers[DOWN].size() << endl;
+                cout << "Sized comm up: " << out_comm_buffers[UP].size() << endl;
+                cout << "Sized comm left: " << out_comm_buffers[LEFT].size() << endl;
+                cout << "Sized comm right: " << out_comm_buffers[RIGHT].size() << endl;
+            }
+            MPI_Barrier(grid);
+        }
+
 
         // Send and recv communication buffers to neighbours
         for(int i = UP; i<=LEFT;i++){
@@ -221,8 +213,9 @@ int main(int argc, char** argv)
             MPI_Send(&(out_comm_buffers[i][0]),
                     out_comm_buffers[i].size()*sizeof(pcord_t), MPI_BYTE,
                     neighbours[i], i*10+1, grid); 
-            /* cout << myid << ": " << i << " Neighbour: " << neighbours[i] << endl; */
-            out_comm_buffers[i].clear();
+
+            /* if(time_step == 1) */
+            /*     cout << "After: " << myid << ": timestep: " << time_step << " Direction: " << i << " Neighbour: " << neighbours[i] << endl; */
             // Probe down to get size of incoming buffer
             MPI_Probe(neighbours[(i+2)%4], i*10+1, grid, &status);
             MPI_Get_count(&status, MPI_BYTE, &in_comm_buffer_size);
@@ -234,17 +227,18 @@ int main(int argc, char** argv)
 
         }
 
-
+        MPI_Barrier(grid);
         for(int i=0;i<4;i++){
+            /* out_comm_buffers[i].clear(); */
             for(vector<pcord_t>::iterator it = in_comm_buffers[i].begin(); it != in_comm_buffers[i].end(); it++){
-                moved.push_back(*it);
+                particles.push_back(*it);
             }
         }
     }
 
     for(int i=0;i<size;i++){
         if(myid == i){
-            cout << myid << ": Sized moved: " << moved.size() << endl;
+            cout << myid << ": Sized moved: " << particles.size() << endl;
             cout << myid << ": Sized comm down: " << in_comm_buffers[DOWN].size() << endl;
             cout << myid << ": Sized comm up: " << in_comm_buffers[UP].size() << endl;
             cout << myid << ": Sized comm left: " << in_comm_buffers[LEFT].size() << endl;
