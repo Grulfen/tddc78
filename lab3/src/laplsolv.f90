@@ -70,9 +70,10 @@ use omp_lib
   
   t1 = omp_get_wtime()
 
-  write(unit=*,fmt=*) 'Time:',t1-t0,'Number of Iterations:',k
-  write(unit=*,fmt=*) 'Temperature of element T(1,1)  =',T(1,1)
-  write(unit=*,fmt=*) 'Error =',error
+  write(unit=*,fmt=*) 'Time:',t1-t0
+  ! write(unit=*,fmt=*) 'Time:',t1-t0,'Number of Iterations:',k
+  ! write(unit=*,fmt=*) 'Temperature of element T(1,1)  =',T(1,1)
+  ! write(unit=*,fmt=*) 'Error =',error
 
   ! Uncomment the next part if you want to write the whole solution
   ! to a file. Useful for plotting. 
