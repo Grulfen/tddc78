@@ -77,10 +77,6 @@ int main(int argc, char** argv)
         // MPI_PROC_NULL if no neighbour
         int neighbours[4];
 
-        //TODO tabort
-        float tmp_moment = 0;
-        int num_collide = 0;
-
         // Communication buffers
         vector<pcord_t> out_comm_buffers[4];
         vector<pcord_t> in_comm_buffers[4];
@@ -174,17 +170,32 @@ int main(int argc, char** argv)
                 // Check for wall collisions or border crossings
                 vector<pcord_t>::iterator a = particles.begin();
                 while(a != particles.end()){
-                        dir = get_border(&(*a), wall);
-                        if(dir == INSIDE){
-                                a++;
-                        } else if(walls[dir]) {
-                                num_collide++;
-                                l_pressure += wall_collide(&(*a), wall);
-                                a++;
-                        } else {
-                                out_comm_buffers[dir].push_back(*a);
-                                a = particles.erase(a);
+                    dir = get_border(&(*a), wall);
+                    if(dir == INSIDE){
+                        a++;
+                    } else if(walls[dir]) {
+                        l_pressure += wall_collide(&(*a), wall);
+                        a++;
+                    } else {
+                        switch(dir){
+                            case UP:
+                                a->y = a->y + wall.y1;
+                                break;
+                            case RIGHT:
+                                a->x = a->x - wall.x1;
+                                break;
+                            case DOWN:
+                                a->y = a->y - wall.y1;
+                                break;
+                            case LEFT:
+                                a->x = a->x + wall.x1;
+                                break;
+                            default:
+                                break;
                         }
+                        out_comm_buffers[dir].push_back(*a);
+                        a = particles.erase(a);
+                    }
                 }
 
                 // Send and recv communication buffers to neighbours
@@ -214,15 +225,6 @@ int main(int argc, char** argv)
         }
 
         MPI_Reduce(&l_pressure, &g_pressure, 1, MPI_FLOAT, MPI_SUM, 0, MPI_COMM_WORLD);
-
-        for(int i = 0;i<size;i++){
-                if(myid == i){
-                        cout << myid << ": Number of particles: " << particles.size() << endl;
-                        cout << myid << ": l_pressure: " << l_pressure << endl;
-                        cout << myid << ": num_collide: " << num_collide << endl;
-                }
-                MPI_Barrier(grid);
-        }
 
         end_time = MPI_Wtime();
         if(myid == 0){
