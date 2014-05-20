@@ -3,7 +3,7 @@ set xlabel "Number of particles (10000)"
 set ylabel "Pressure"
 set title "Pressure vs n"
 set terminal png
-set output 'pressure.png'
+set output 'particles.png'
 
 plot "particles.dat" using 1:2 title "p vs n" with linespoints
 
