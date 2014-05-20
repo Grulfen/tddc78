@@ -38,10 +38,17 @@ but with added functionality for pthreads.
 
 When the program is started the main thread allocates memory for the input image
 and the resulting image and then reads the input file and calls the function
-calculating the Gaussian coefficients. 
+calculating the Gaussian coefficients. As in the averaging filter from lab one
+the image is divided so that each thread will work on a continuous set of rows,
+where the last thread will take the remaining part if the number of rows is
+evenly divisible by the number of threads.
+
+A struct is used to store and pass all information that each thread needs. This
+include source and destination pointers to their respective part of the image,
+information about sizes and filtering parameters.
 
 %%
-% OLD REPORT
+% BEGIN OLD REPORT
 %%
 In order to utilize the cache functionality as much as possible we split the image
 horizontally in equally sized parts. If the y-size of the image is not divisible
@@ -100,6 +107,9 @@ The source code can be found in the attached source code files.
 The functionality of the code is described in section \ref{sec:desc} and in the
 comments in the source code.
 
+%%
+% END OLD REPORT
+%%
 
 \section{Threshold Filter}
 The threshold filter computes the average intensity of the image and then use
