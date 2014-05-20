@@ -111,7 +111,7 @@ the threshold value and one doing the filtering.
 When starting the execution the main thread allocates memory for the image and
 then reads it. The main thread then calculates how many pixels each thread
 should filter and then spawns the threads that calculate the threshold value for
-their part of the image. After that the main threads joins with all the threads
+their part of the image. After that the main thread joins with all the threads
 and add their threshold value to the global threshold value.
 
 New threads are then spawned to filter their part of the image. The main thread
@@ -124,14 +124,14 @@ The execution time is measured using the clock\_gettime() function. It is
 started after the main thread has read the input file and is ended before
 writing the output file.
 
-The filter is run with 16 processors
+During simulation one node (16 cores) was used.
 
 The results can be found in figure \ref{fig:thres} in appendix
 \ref{sec:fig_thres}. As in the averaging filter the performance improvement is
 greater in the beginning. We can see that the execution time decreases as we
 increase the number of threads. When using 17 threads the execution time
 increases, this is because we use 16 cores and one hardware thread per core. So
-when we have 17 threads there are more threads than hardware threads.
+when we have 17 threads there are more threads than hardware threads. 
 
 \subsection{Source}
 
