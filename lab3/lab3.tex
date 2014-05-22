@@ -4,7 +4,8 @@
 \usepackage{listings}
 
 \lstset{language=fortran,
-        basicstyle=\ttfamily\scriptsize}
+        basicstyle=\ttfamily\scriptsize,
+        numbers=left}
 
 \pagestyle{fancy}
 \lhead{TDDC78 Lab 3}
@@ -28,11 +29,76 @@
 \section{Description}
 The parallel implementation is based on the serial Fortran90 source code
 provided. When running the executable the number of threads is given as
-an argument, i.e. "./lab3 2" for two threads.   
+an argument, i.e. "./lab3 2" for two threads.
+
+The outer loop is left un-parallelized while the inner loop is run on the
+available threads. Since the memory organization in Fortran is opposite the one
+in C, we now divide the work so that one thread always will work on entire
+columns in order to utilize the cache properly. The columns are divided equally
+among the threads, with the last thread taking any remainder from the integer
+division. To prevent use of a value that has already been updated by another
+thread in the same iteration temporary columns are saved by each threads.
+
+Because the source code for this laboration is quite compact the
+calculation kernel in its entirety can be found in section \ref{sec:src}.
 
 \section{Performance}
 
+\newpage
 \section{Source}
+\label{sec:src}
+The following listing shows the code for the outer loop.
+
+\begin{lstlisting}
+  do k=1,maxiter
+     
+     error=0.0D0
+     !$OMP parallel default(private) shared(T,k) reduction(max:error)
+     myid = omp_get_thread_num()
+     team_size = omp_get_num_threads()
+     even_cols = n/team_size;
+
+     tmp_left=T(1:n,myid*even_cols)
+
+     if(myid == team_size-1) then
+        tmp_last=T(1:n,n+1)
+        my_cols = even_cols + mod(n, team_size)
+     else 
+        my_cols = even_cols
+        tmp_last = T(1:n,(myid+1)*even_cols+1)
+     end if
+
+     !$OMP BARRIER
+     do j=myid*even_cols+1,myid*even_cols+my_cols
+
+        tmp_mid=T(1:n,j)
+        if(j == (myid+1)*my_cols) then
+          tmp_right = tmp_last
+        else
+          tmp_right=T(1:n,j+1)
+        end if
+        T(1:n,j)=(T(0:n-1,j)+T(2:n+1,j)+tmp_right+tmp_left)/4.0D0
+        error=max(error,maxval(abs(tmp_mid-T(1:n,j))))
+        tmp_left=tmp_mid
+     end do
+     !$OMP end parallel
+     
+     if (error<tol) then
+        exit
+     end if
+     
+  end do
+\end{lstlisting}
+%%%%%%%% !$ - Endast för att fixa knas med text highlighting.
+
+Going through the loop step by step, the first thing that is happening in each
+iteration is that the error is reset. The OMP parallel directive is used around
+everything besides checking the stopping criteria. Reduction with the max
+function is used for computing the error. After the OMP parallel directive the
+work is divided among the threads and the columns directly to the left and right
+of a threads area is saved in temporary variables. In order to make sure that
+all threads have saved these columns, a barrier is used before the inner loop
+starts.
 
 \newpage
 \appendix
