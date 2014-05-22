@@ -43,6 +43,7 @@ Because the source code for this laboration is quite compact the
 calculation kernel in its entirety can be found in section \ref{sec:src}.
 
 \section{Performance}
+The time for the outer loop was measured using the omp\_get\_time() function.
 
 \newpage
 \section{Source}
@@ -98,7 +99,11 @@ function is used for computing the error. After the OMP parallel directive the
 work is divided among the threads and the columns directly to the left and right
 of a threads area is saved in temporary variables. In order to make sure that
 all threads have saved these columns, a barrier is used before the inner loop
-starts.
+starts. The calculations done in the loop is almost the same as in the serial
+code, but with modification for the temporary variables. An example is found on
+line number 23 in the listing; if a thread is working on its
+last column it needs to use the temp\_last column assigned outside of the inner
+loop because it belongs to another thread. 
 
 \newpage
 \appendix
