@@ -20,3 +20,11 @@ set title "Pressure vs 1/Area"
 set output 'area.png'
 
 plot "area.dat" using (1/$1):2 title "p vs 1/area" with linespoints
+
+set xlabel "Number of processes"
+set ylabel "Time"
+set logscale y
+set title "Speedup of parallelization"
+set output 'performance.png'
+
+plot "performance.dat" using 1:2 with linespoints
