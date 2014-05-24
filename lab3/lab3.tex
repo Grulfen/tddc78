@@ -37,16 +37,31 @@ in C, we now divide the work so that one thread always will work on entire
 columns in order to utilize the cache properly. The columns are divided equally
 among the threads, with the last thread taking any remainder from the integer
 division. To prevent use of a value that has already been updated by another
-thread in the same iteration temporary columns are saved by each threads.
+thread in the same iteration temporary columns are saved by each thread.
 
 Because the source code for this laboration is quite compact the
 calculation kernel in its entirety can be found in section \ref{sec:src}.
 
 \section{Performance}
-The time for the outer loop was measured using the omp\_get\_time() function.
+The execution time for the whole outer loop was measured using the omp\_get\_time() function.
+
+The result can be seen in figure \ref{fig:omp}.
+
+When running with few threads the speedup is very good which is to be expected
+since there is little communication between threads. The execution time flattens
+out at around 12 threads and then increases.
+
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.8\textwidth]{omp.png}
+        \caption{Execution times}
+        \label{fig:omp}
+\end{figure}
 
 \newpage
-\section{Source}
+
+\section(easymotion-prefix)zA{Source}
 \label{sec:src}
 The following listing shows the code for the outer loop.
 
@@ -105,8 +120,15 @@ line number 23 in the listing; if a thread is working on its
 last column it needs to use the temp\_last column assigned outside of the inner
 loop because it belongs to another thread. 
 
-\newpage
-\appendix
-\section{Figures}
+% \newpage
+% \appendix
+% \section{Figures}
+% \label{sec:fig}
+% \begin{figure}[h]
+%         \centering
+%         \includegraphics[width=0.8\textwidth]{omp.png}
+%         \caption{Execution times}
+%         \label{fig:omp}
+% \end{figure}
 
 \end{document}
