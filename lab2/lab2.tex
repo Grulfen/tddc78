@@ -83,6 +83,19 @@ One probable reason for this can be that when using more software threads than
 hardware threads the low overhead context switch can hide effects of a thread
 having to wait, for example because of a cache miss.
 
+\subsubsection{FLOP(S)}
+\label{sec:bflop}
+We made a rough estimation of the number of floating point operations (FLOP) in the
+program, taking only the loops of the x and y filter functions into account.
+All arithmetic operations was counted as one FLOP. The formula we came up with
+was 2*ysize + xsize*ysize*(74*radius + 50). For the largest image (3000x3000
+pixels) and a radius of 32 the formula gives us approximately 21.8 GFLOP. In
+order to get an estimate of the floating point operations per second (FLOPS) we
+divided this number with the execution time with a certain number of threads.
+Using one, eight and 16 threads the program ran at 779 MFLOPS, 5.95 GFLOPS and
+10.1 GFLOPS respectively.
+
+
 
 \subsection{Source}
 
@@ -132,6 +145,15 @@ greater in the beginning. We can see that the execution time decreases as we
 increase the number of threads. When using 17 threads the execution time
 increases, this is because we use 16 cores and one hardware thread per core. So
 when we have 17 threads there are more threads than hardware threads. 
+
+\subsubsection{FLOP(S)}
+The formula for the number of FLOP in the threshold filter was constructed in a
+similar fashion to that in section \ref{sec:bflop}. Only the loops of the
+functions calculating the threshold value and filtering was taken into account. 
+The resulting formula is 7*n, where n is the number of pixels in the image. For
+the largest image this gives 63 MFLOP. Finally, the number of FLOPS when running
+the program with one, eight and 16 threads are 580 MFLOPS, 4.23 GFLOPS and 7.39
+GFLOPS, respectively. 
 
 \subsection{Source}
 
