@@ -27,4 +27,4 @@ set logscale y
 set title "Speedup of parallelization"
 set output 'performance.png'
 
-plot "performance.dat" using 1:2 with linespoints
+plot "performance.dat" using 1:2 title "40K particles 30 steps" with linespoints
