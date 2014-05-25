@@ -119,9 +119,11 @@ These results verify the gas law.
 The speedup when running the simulation with 40 000 particles for 30 time
 steps can be seen in figure \ref{fig:perf}. Note that the scale for the time
 axis is logarithmic. The algorithm is limited to work on a square
-number of processors and in the figure the square numbers up to 36 can be seen.
+number of processes and in the figure the square numbers up to 36 can be seen.
 The speedup is super linear due to much of the work in the inner loops being 
-iterating through vectors.
+iterating through vectors. Especially the particle collision checking and
+handling benefits from running on more processors because it takes a long time
+and will scale better than n.
 
 \section{Source}
 \label{sec:src}
