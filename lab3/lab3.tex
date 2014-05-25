@@ -44,7 +44,6 @@ calculation kernel in its entirety can be found in section \ref{sec:src}.
 
 \section{Performance}
 The execution time for the whole outer loop was measured using the omp\_get\_time() function.
-
 The result can be seen in figure \ref{fig:omp}.
 
 When running with few threads the speedup is very good which is to be expected
@@ -105,7 +104,7 @@ The following listing shows the code for the outer loop.
      
   end do
 \end{lstlisting}
-%%%%%%%% !$ - Endast för att fixa knas med text highlighting.
+
 
 Going through the loop step by step, the first thing that is happening in each
 iteration is that the error is reset. The OMP parallel directive is used around
