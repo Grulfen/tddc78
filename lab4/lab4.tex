@@ -122,8 +122,8 @@ axis is logarithmic. The algorithm is limited to work on a square
 number of processes and in the figure the square numbers up to 36 can be seen.
 The speedup is super linear due to much of the work in the inner loops being 
 iterating through vectors. Especially the particle collision checking and
-handling benefits from running on more processors because it takes a long time
-and will scale better than n.
+handling benefits from running on more processors because of its
+O(n\textsuperscript{2}) time complexity in the inner loop. 
 
 \section{Source}
 \label{sec:src}
