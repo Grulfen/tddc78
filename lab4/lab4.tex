@@ -87,6 +87,45 @@ box.
 \section{Performance}
 \section{Source}
 \label{sec:src}
+The most interesting part of the code is the collision detection and handling of
+the particles. The commented source can be seen below.
+\begin{lstlisting}
+        // Check for collisions and move particles
+        for(vector<pcord_t>::iterator a = particles.begin(); a != particles.end() - 1; a++){
+            for(vector<pcord_t>::iterator b = a+1; b != particles.end(); b++){
+                collision_time = collide(&(*a),&(*b));
+                // Collision
+                if(collision_time != -1){
+                    // collided, move particles
+                    interact(&(*a), &(*b), collision_time);
+
+                    // swap collided particle with next particle and skip to
+                    // next iteration
+                    swap(*(a+1), *(b));
+                    a++;
+                    break;
+                }
+            }
+            if(collision_time != -1){
+                if(a == particles.end())
+                    // prevent errors if second last particle collides with last
+                    // particle
+                    break;
+            } else {
+                // if no collision move particle
+                feuler(&(*a), STEP_SIZE);
+            }
+        }
+\end{lstlisting}
+
+Every particle is compared to all the particles to the right of itself for
+collisions. The function \textit{collide} is used for determining the
+collisions. If there is a collision both the particles are updated using
+\textit{interact} and the momentum is added to the local momentum saved in the
+variable \textit{l\_pressure}. The second particle is then swapped with the
+particle next to the first one and the iterator is increased one step. This way
+every particle is only checked once. If there is no collision the particle is
+moved using \textit{feuler}.
 
 \newpage
 \appendix

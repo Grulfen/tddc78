@@ -161,7 +161,11 @@ int main(int argc, char** argv)
                 collision_time = collide(&(*a),&(*b));
                 // Collision
                 if(collision_time != -1){
+                    // collided, move particles
                     interact(&(*a), &(*b), collision_time);
+
+                    // swap collided particle with next particle and skip to
+                    // next iteration
                     swap(*(a+1), *(b));
                     a++;
                     break;
@@ -169,14 +173,19 @@ int main(int argc, char** argv)
             }
             if(collision_time != -1){
                 if(a == particles.end())
+                    // prevent errors if second last particle collides with last
+                    // particle
                     break;
             } else {
+                // if no collision move particle
                 feuler(&(*a), STEP_SIZE);
             }
         }
 
         // Check for wall collisions or border crossings
         vector<pcord_t>::iterator a = particles.begin();
+        // Use while loop to be able to remove elements from the list that are
+        // being iterated over
         while(a != particles.end()){
             dir = get_border(&(*a), wall);
             if(dir == INSIDE){
