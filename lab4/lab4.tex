@@ -1,0 +1,72 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{listings}
+
+\lstset{language=c++,
+        basicstyle=\ttfamily\scriptsize,
+        numbers=left}
+
+\pagestyle{fancy}
+\lhead{TDDC78 Lab 4}
+\rhead{Hallberg, Svensk}
+
+\begin{document}
+
+\title{TDDC78 Lab 4\\
+        Particle Simulation - MPI}
+\author{Christopher Hallberg \\
+        Gustav Svensk}
+\maketitle
+
+\thispagestyle{empty}
+
+\newpage
+\setcounter{page}{1}
+\tableofcontents
+\newpage
+
+\section{Description}
+This section provides a high level overview of the parallel program.
+The structure of the program is:
+\begin{itemize}
+\item Setup
+\item Particle generation
+\item Simulation
+\item Reduction
+\end{itemize}
+Our implementation is restricted to only run on a square number of processes,
+this is to make it easier to split the particles among the processes. In our case
+each process takes care of a smaller square and initializes particles inside.
+
+We used vectors to store the particles to be able to benefit from cache effects,
+and to avoid memory allocation and deallocation in the critical loop.
+Using vectors also makes it easier to communicate the particles between processes.
+
+\subsection{Setup}
+In the setup phase the root processor broadcasts the number of time steps and
+the number of particles in the simulation to every process. The communication
+grid is setup using MPI\_Cart\_create and each process gets the id of its
+neighbours via MPI\_Cart\_shift. The ids of the neighbours are saved in an
+array. If a process does not have a neighbour the special id MPI\_PROC\_NULL is
+saved instead. Each process checks if it has a wall on any of its sides. 
+Each process has its own local coordinates.
+
+\subsection{Particle generation}
+In this phase each process generates as many particles as indicated by the
+command line argument num\_particles. The particles position and velocity is
+randomly generated. The function \textit{genrate\_particles} is used to generate
+the particles.
+\subsection{Simulation}
+\subsection{Reduction}
+
+\section{Performance}
+\section{Source}
+\label{sec:src}
+
+\newpage
+\appendix
+\section{Figures}
+\label{sec:fig}
+
+\end{document}
