@@ -38,61 +38,64 @@ but with added functionality for pthreads.
 
 When the program is started the main thread allocates memory for the input image
 and the resulting image and then reads the input file and calls the function
-calculating the Gaussian coefficients. 
+calculating the Gaussian coefficients. As in the averaging filter from lab one
+the image is divided so that each thread will work on a continuous set of rows,
+where the last thread will take the remaining part if the number of rows is not
+evenly divisible by the number of threads.
 
-%%
-% OLD REPORT
-%%
-In order to utilize the cache functionality as much as possible we split the image
-horizontally in equally sized parts. If the y-size of the image is not divisible
-by the number of processors used the last processor will be assigned the
-additional lines. Each processor will allocate local memory for their part of the
-image plus extra shadow pixels needed to filter along the y-axis. The memory
-needed for these shadow pixels will correspond to two times the width of the
-image times the radius of the filtering rectangle. The root processor then 
-scatters the image to every processor.  
-
-The filter function provided have been split into two separate functions, the
-first filtering along the x-axis and the other filtering along the y-axis. Some
-small changes had to be made to copy memory and handle the shadow pixels. The
-y-filter have two additional arguments specifying if the process will need
-information about shadow pixels from another process or not. 
-
-If there is only one process it will just call the two filter functions. If
-there are more than one process the root process first sends the part of the
-image left over after the integer division to the last process. All processes
-filter along the x-axis which require no message passing between them.
-The required shadow pixels are then passed, starting by first sending "upward"
-then "downward". The y-filter is called by each process with the arguments 
-corresponding to the position in the image. 
-
-Passing the filtered image back to the root process is done by the last process 
-first sending the filtered left over part from the integer division. The main
-part of the image is passed back using the gather function.
-The root then writes the image back to a file.
+A struct is used to store and pass all information that each thread needs. This
+include source and destination pointers to their respective part of the image,
+information about sizes and filtering parameters. The main thread loops over
+the number of threads, spawning them after setting the appropriate parameters.
+As in the previous lab the filter is divided into an x-part and a y-part. This
+means that the threads have to be created and joined two times. Using two
+pointers, one for source and one for destination, helps to avoid data hazards
+when accessing image data outside of a thread's designated part. The program is
+terminated after the main thread has written the image back to file.
  
 
 \subsection{Performance}
-The execution time is measured using the MPI\_Wtime() function. It is started
-after the root processor has calculated the Gaussian
-coefficients and is ended before the root processor writes the output file.
-The execution times are measured by running the program nine times and removing the
-first result to eliminate cache effects. The results can be seen in the figures
+The execution time is measured using the clock\_gettime() function. It is
+started after the main thread has computed the Gaussian coefficients 
+and is ended before writing the output file. 
+
+One node (16 cores) was used during the simulation. Each of the images was
+filtered with an increasing number of threads and using four different radii
+(4, 8, 16 and 32). The results can be seen in the figures
 \ref{fig:blur_4}, \ref{fig:blur_8}, \ref{fig:blur_16} and \ref{fig:blur_32} in
 appendix \ref{sec:fig_aver}.
 
-The first thing to note is that the greatest improvement due to parallelization
-can be seen when increasing the number of processes when the number of processes
-is low. When using many processes the improvement of adding more processes is
-very small. The curves flattens out at around 35 processes, this is due to the
-overhead of more processes is as big as the parallelization gain.
+All the data sets follow the same general pattern but with different execution
+times. The greatest performance improvement, in absolute numbers,
+is found when increasing the number of threads from one to two. Then the execution 
+time is halved, giving an optimal improvement. In relative values this continues
+to hold even for some additional number of threads. However, the curves deviate
+from the optimal case with increasing number of threads. The deviation is
+smaller for larger problem sizes. For the largest image with a radius of 32 
+going from one thread to eight threads gives a speed-up of about 7.6, while
+going from one thread to 16 gives a speed-up of about 14. The same numbers for
+the smallest images with radius of four are 7.3 and 11.6, respectively. 
 
-There is a strange peak at seven processes that we do not know the cause of. We don't
-know if this is due to out algorithm or due to the scheduler at NSC.
-The percental performance increase is very similar across image sizes and radii.
-The performance increase for images 2, 3 and 4 is very big from one process to
-two and three to four but not as big from two to three. This is not true for image 1. This is
-because the number of rows in image 1 is not divisible by two or 4.
+At 17 threads the number of software threads exceeds the number of hardware
+threads available and a sudden decrease of performance can be seen then. Adding
+even more threads will yield slightly better performance compared to that of 17.
+One probable reason for this can be that when using more software threads than
+hardware threads the low overhead context switch can hide effects of a thread
+having to wait, for example because of a cache miss.
+
+\subsubsection{FLOP(S)}
+\label{sec:bflop}
+We made a rough estimation of the number of floating point operations (FLOP) in the
+program, taking only the loops of the x and y filter functions into account.
+All arithmetic operations was counted as one FLOP. The formula we came up with
+was 2*ysize + xsize*ysize*(74*radius + 50). For the largest image (3000x3000
+pixels) and a radius of 32 the formula gives us approximately 21.8 GFLOP. In
+order to get an estimate of the floating point operations per second (FLOPS) we
+divided this number with the execution time with a certain number of threads.
+Using one, eight and 16 threads the program ran at 779 MFLOPS, 5.95 GFLOPS and
+10.1 GFLOPS respectively.
+
+
 
 \subsection{Source}
 
@@ -121,7 +124,7 @@ the threshold value and one doing the filtering.
 When starting the execution the main thread allocates memory for the image and
 then reads it. The main thread then calculates how many pixels each thread
 should filter and then spawns the threads that calculate the threshold value for
-their part of the image. After that the main threads joins with all the threads
+their part of the image. After that the main thread joins with all the threads
 and add their threshold value to the global threshold value.
 
 New threads are then spawned to filter their part of the image. The main thread
@@ -134,18 +137,23 @@ The execution time is measured using the clock\_gettime() function. It is
 started after the main thread has read the input file and is ended before
 writing the output file.
 
-The filter is run with 16 processors
-
-%%
-% OLD REPORT
-%%
+During simulation one node (16 cores) was used.
 
 The results can be found in figure \ref{fig:thres} in appendix
 \ref{sec:fig_thres}. As in the averaging filter the performance improvement is
 greater in the beginning. We can see that the execution time decreases as we
 increase the number of threads. When using 17 threads the execution time
 increases, this is because we use 16 cores and one hardware thread per core. So
-then we have 17 threads there are more threads than hardware threads.
+when we have 17 threads there are more threads than hardware threads. 
+
+\subsubsection{FLOP(S)}
+The formula for the number of FLOP in the threshold filter was constructed in a
+similar fashion to that in section \ref{sec:bflop}. Only the loops of the
+functions calculating the threshold value and filtering was taken into account. 
+The resulting formula is 7*n, where n is the number of pixels in the image. For
+the largest image this gives 63 MFLOP. Finally, the number of FLOPS when running
+the program with one, eight and 16 threads are 580 MFLOPS, 4.23 GFLOPS and 7.39
+GFLOPS, respectively. 
 
 \subsection{Source}
 
@@ -209,6 +217,7 @@ comments in the source code.
         \label{fig:blur_32}
 \end{figure}
 \clearpage
+
 \section{Figures - Threshold}
 \label{sec:fig_thres}
 
