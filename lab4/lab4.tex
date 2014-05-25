@@ -84,6 +84,27 @@ summed in the root process using MPI\_Reduce. The pressure is then calculated
 by dividing the momentum by the number of time steps and the wall length of the
 box.
 
+\section{Verification}
+All the figures can be found in appendix \ref{sec:fig}.
+
+The goal of this lab is to verify the gas law $pV = nRT$.
+By rewriting the equation we get: $p = \frac{nRT}{V}$ and we see that the
+pressure should be linear with the number of particles and the temperature and
+inversely proportional to the volume, or in our case, the area.
+
+In figure \ref{fig:n} we can see that the pressure is linear with the number of
+particles. In figure \ref{fig:V} the pressure is plotted against one over the
+area and we get a straight line, therefore the pressure is inversely
+proportional to the area.
+
+The kinetic temperature is proportional to the square of the velocity of the
+particles. So by changing the maximal initial velocity of the particles we can
+control the temperature. We can now write $p \propto \frac{nR(mv^2)}{2V}$ and
+$\sqrt{p} \propto v$ if the other variables are constant. Figure \ref{fig:T}
+verifies this.
+
+These results verify the gas law.
+
 \section{Performance}
 \section{Source}
 \label{sec:src}
@@ -131,5 +152,23 @@ moved using \textit{feuler}.
 \appendix
 \section{Figures}
 \label{sec:fig}
+\begin{figure}[hb]
+        \centering
+        \includegraphics[width=0.8\textwidth]{particles.png}
+        \caption{Pressure vs number of particles}
+        \label{fig:n}
+\end{figure}
+\begin{figure}[hb]
+        \centering
+        \includegraphics[width=0.8\textwidth]{area.png}
+        \caption{Pressure vs $\frac{1}{area}$}
+        \label{fig:V}
+\end{figure}
+\begin{figure}[hb]
+        \centering
+        \includegraphics[width=0.8\textwidth]{temperature.png}
+        \caption{$\sqrt{Pressure}$ vs temperature}
+        \label{fig:T}
+\end{figure}
 
 \end{document}
