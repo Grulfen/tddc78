@@ -35,13 +35,23 @@ The structure of the program is:
 \item Simulation
 \item Reduction
 \end{itemize}
-Our implementation is restricted to only run on a square number of processes,
-this is to make it easier to split the particles among the processes. In our case
-each process takes care of a smaller square and initializes particles inside.
 
 We used vectors to store the particles to be able to benefit from cache effects,
 and to avoid memory allocation and deallocation in the critical loop.
 Using vectors also makes it easier to communicate the particles between processes.
+
+\subsection{Simplifications}
+This section describes the simplification made to make the program less complex.
+
+Our implementation is restricted to only run on a square number of processes,
+this is to make it easier to split the particles among the processes. In our case
+each process takes care of a smaller square and initializes particles inside.
+Each process starts with the same number of particles, so the distribution is
+more uniform than if it was run with only one process. But if the number of
+particles is big the impact of the simplification will be very small.
+
+Particles can only collide once per time step and cannot collide with particles
+in other processes.
 
 \subsection{Setup}
 In the setup phase the root processor broadcasts the number of time steps and
@@ -159,12 +169,6 @@ moved using \textit{feuler}.
 \appendix
 \section{Figures}
 \label{sec:fig}
-\begin{figure}[h]
-        \centering
-        \includegraphics[width=0.8\textwidth]{performance.png}
-        \caption{4000 particles for 30 time steps}
-        \label{fig:perf}
-\end{figure}
 \begin{figure}[hb]
         \centering
         \includegraphics[width=0.8\textwidth]{particles.png}
@@ -182,6 +186,12 @@ moved using \textit{feuler}.
         \includegraphics[width=0.8\textwidth]{temperature.png}
         \caption{$\sqrt{Pressure}$ vs temperature}
         \label{fig:T}
+\end{figure}
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.8\textwidth]{performance.png}
+        \caption{4000 particles for 30 time steps}
+        \label{fig:perf}
 \end{figure}
 
 \end{document}
