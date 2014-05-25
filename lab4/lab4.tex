@@ -85,6 +85,13 @@ by dividing the momentum by the number of time steps and the wall length of the
 box.
 
 \section{Performance}
+The speedup when running the simulation with 40 000 particles for 30 time
+steps can be seen in figure \ref{fig:perf}. Note that the scale for the time
+axis is logarithmic. The algorithm is limited to work on a square
+number of processors and in the figure the square numbers up to 36 can be seen.
+The speedup is super linear due to much of the work in the inner loops being 
+iterating through vectors.
+
 \section{Source}
 \label{sec:src}
 The most interesting part of the code is the collision detection and handling of
@@ -131,5 +138,11 @@ moved using \textit{feuler}.
 \appendix
 \section{Figures}
 \label{sec:fig}
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.8\textwidth]{performance.png}
+        \caption{4000 particles for 30 time steps}
+        \label{fig:perf}
+\end{figure}
 
 \end{document}
