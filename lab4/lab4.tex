@@ -55,10 +55,34 @@ Each process has its own local coordinates.
 \subsection{Particle generation}
 In this phase each process generates as many particles as indicated by the
 command line argument num\_particles. The particles position and velocity is
-randomly generated. The function \textit{genrate\_particles} is used to generate
+randomly generated. The function \textit{generate\_particles} is used to generate
 the particles.
 \subsection{Simulation}
+The simulation phase contains a for-loop over the time steps. Inside the loop
+each particle is checked for collisions with other particles, wall collisions,
+whether the particle should be passed to another process and finally the
+particles are communicated between the processes.
+
+The details of the collision detection and handling can be seen in section
+\ref{sec:src}.
+
+If a particle is outside of the square it has either collided with a wall or
+will pass over to another square. If it has a wall on that side the function
+\textit{wall\_collide} is used to calculate the momentum and move the particle.
+If there is no wall the particle is moved to a communication buffer and in the
+end of the loop all the particles in the communication buffer are sent to the
+corresponding neighbour.
+
+When communicating between the processes the neighbour array is used. If a
+process uses MPI\_Send to the special id MPI\_PROC\_NULL it immediately returns,
+using this the communication can be done with a simple loop without any edge cases
+for processes in the corners or edges of the box.
+
 \subsection{Reduction}
+In the reduction phase the local momentum calculated in all the processes are
+summed in the root process using MPI\_Reduce. The pressure is then calculated
+by dividing the momentum by the number of time steps and the wall length of the
+box.
 
 \section{Performance}
 \section{Source}
