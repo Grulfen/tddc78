@@ -1,24 +1,27 @@
 CC=icpc
 
-EXE=lab4 rapport
+EXE=lab5
 BIN=bin
 
 CFLAGS = -g -Nmpi -Wextra -Wall -W -pedantic -std=c++0x
 LFLAGS = -lm -Nmpi
 
+# CFLAGS  += -tcollect -I$(VT_ROOT)/include
+# LFLAGS  += -L$(VT_LIB_DIR) -lVT $(VT_ADD_LIBS)
+
 all: $(EXE)
 
-lab4: $(BIN)/lab4.o $(BIN)/physics.o
+lab5: $(BIN)/lab5.o $(BIN)/physics.o
 	$(CC) $^ $(LFLAGS) -o $@
 
 $(BIN)/%.o: %.cc
 	$(CC) $(CFLAGS) -c $^ -o $@
 
-rapport: lab4.tex
-	pdflatex lab4.tex
-	pdflatex lab4.tex
-	pdflatex lab4.tex
+rapport: lab5.tex
+	pdflatex lab5.tex
+	pdflatex lab5.tex
+	pdflatex lab5.tex
 
 clean:
 	rm -f $(BIN)/*.o $(EXE)
-	rm -f lab4.aux lab4.log lab4.toc
+	rm -f lab5.aux lab5.log lab5.toc
