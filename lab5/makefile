@@ -6,8 +6,8 @@ BIN=bin
 CFLAGS = -g -Nmpi -Wextra -Wall -W -pedantic -std=c++0x
 LFLAGS = -lm -Nmpi
 
-# CFLAGS  += -tcollect -I$(VT_ROOT)/include
-# LFLAGS  += -L$(VT_LIB_DIR) -lVT $(VT_ADD_LIBS)
+CFLAGS  += -tcollect -I$(VT_ROOT)/include
+LFLAGS  += -L$(VT_LIB_DIR) -lVT $(VT_ADD_LIBS)
 
 all: $(EXE)
 

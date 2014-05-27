@@ -7,6 +7,7 @@
 #include<iostream>
 #include<cmath>
 #include<algorithm>
+#include<VT.h>
 
 using namespace std;
 
@@ -62,6 +63,23 @@ int main(int argc, char** argv)
 
     int myid, size;
     int time_steps;
+
+    // BEGIN ITACC STUFFZ
+
+    int loop_state;
+
+    VT_classdef("Loop state", &loop_state);
+
+    int collision_part;
+    int wall_part;
+    int comm_part;
+
+    VT_funcdef("Collision part", loop_state, &collision_part);
+    VT_funcdef("Wall and border part", loop_state, &wall_part);
+    VT_funcdef("Communication part", loop_state, &comm_part);
+
+    // END ITACC STUFFZ
+
     double start_time, end_time;
 
     start_time = MPI_Wtime();
@@ -155,6 +173,9 @@ int main(int argc, char** argv)
     //
     for(int time_step=0;time_step<time_steps;time_step++){
 
+
+
+        VT_enter(collision_part, VT_NOSCL);
         // Check for collisions and move particles
         for(vector<pcord_t>::iterator a = particles.begin(); a != particles.end() - 1; a++){
             for(vector<pcord_t>::iterator b = a+1; b != particles.end(); b++){
@@ -174,7 +195,9 @@ int main(int argc, char** argv)
                 feuler(&(*a), STEP_SIZE);
             }
         }
+        VT_leave(VT_NOSCL);
 
+        VT_enter(wall_part, VT_NOSCL);
         // Check for wall collisions or border crossings
         vector<pcord_t>::iterator a = particles.begin();
         while(a != particles.end()){
@@ -205,7 +228,9 @@ int main(int argc, char** argv)
                 a = particles.erase(a);
             }
         }
+        VT_leave(VT_NOSCL);
 
+        VT_enter(comm_part, VT_NOSCL);
         // Send and recv communication buffers to neighbours
         for(int i = UP; i<=LEFT;i++){
             // Send up
@@ -230,8 +255,9 @@ int main(int argc, char** argv)
                 particles.push_back(*it);
             }
         }
+        VT_leave(VT_NOSCL);
     }
-    
+
     //
     // REDUCTION
     //
