@@ -1,0 +1,199 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{listings}
+
+\lstset{language=c++,
+        basicstyle=\ttfamily\scriptsize,
+        numbers=left}
+
+\pagestyle{fancy}
+\lhead{TDDC78 Lab 4}
+\rhead{Hallberg, Svensk}
+
+\begin{document}
+
+\title{TDDC78 Lab 4\\
+        Particle Simulation - MPI}
+\author{Christopher Hallberg \\
+        Gustav Svensk}
+\maketitle
+
+\thispagestyle{empty}
+
+\newpage
+\setcounter{page}{1}
+\tableofcontents
+\newpage
+
+\section{Description}
+This section provides a high level overview of the parallel program.
+The structure of the program is:
+\begin{itemize}
+\item Setup
+\item Particle generation
+\item Simulation
+\item Reduction
+\end{itemize}
+
+We used vectors to store the particles to be able to benefit from cache effects,
+and to avoid memory allocation and deallocation in the critical loop.
+Using vectors also makes it easier to communicate the particles between processes.
+
+\subsection{Simplifications}
+This section describes the simplification made to make the program less complex.
+
+Our implementation is restricted to only run on a square number of processes,
+this is to make it easier to split the particles among the processes. In our case
+each process takes care of a smaller square and initializes particles inside.
+Each process starts with the same number of particles, so the distribution is
+more uniform than if it was run with only one process. But if the number of
+particles is big the impact of the simplification will be very small.
+
+Particles can only collide once per time step and cannot collide with particles
+in other processes.
+
+\subsection{Setup}
+In the setup phase the root processor broadcasts the number of time steps and
+the number of particles in the simulation to every process. The communication
+grid is setup using MPI\_Cart\_create and each process gets the id of its
+neighbours via MPI\_Cart\_shift. The ids of the neighbours are saved in an
+array. If a process does not have a neighbour the special id MPI\_PROC\_NULL is
+saved instead. Each process checks if it has a wall on any of its sides. 
+Each process has its own local coordinates.
+
+\subsection{Particle generation}
+In this phase each process generates as many particles as indicated by the
+command line argument num\_particles. The particles position and velocity is
+randomly generated. The function \textit{generate\_particles} is used to generate
+the particles.
+\subsection{Simulation}
+The simulation phase contains a for-loop over the time steps. Inside the loop
+each particle is checked for collisions with other particles, wall collisions,
+whether the particle should be passed to another process and finally the
+particles are communicated between the processes.
+
+The details of the collision detection and handling can be seen in section
+\ref{sec:src}.
+
+If a particle is outside of the square it has either collided with a wall or
+will pass over to another square. If it has a wall on that side the function
+\textit{wall\_collide} is used to calculate the momentum and move the particle.
+If there is no wall the particle is moved to a communication buffer and in the
+end of the loop all the particles in the communication buffer are sent to the
+corresponding neighbour.
+
+When communicating between the processes the neighbour array is used. If a
+process uses MPI\_Send to the special id MPI\_PROC\_NULL it immediately returns,
+using this the communication can be done with a simple loop without any edge cases
+for processes in the corners or edges of the box.
+
+\subsection{Reduction}
+In the reduction phase the local momentum calculated in all the processes are
+summed in the root process using MPI\_Reduce. The pressure is then calculated
+by dividing the momentum by the number of time steps and the wall length of the
+box.
+
+\section{Verification}
+All the figures can be found in appendix \ref{sec:fig}.
+
+The goal of this lab is to verify the gas law $pV = nRT$.
+By rewriting the equation we get: $p = \frac{nRT}{V}$ and we see that the
+pressure should be linear with the number of particles and the temperature and
+inversely proportional to the volume, or in our case, the area.
+
+In figure \ref{fig:n} we can see that the pressure is linear with the number of
+particles. In figure \ref{fig:V} the pressure is plotted against one over the
+area and we get a straight line, therefore the pressure is inversely
+proportional to the area.
+
+The kinetic temperature is proportional to the square of the velocity of the
+particles. So by changing the maximal initial velocity of the particles we can
+control the temperature. We can now write $p \propto \frac{nR(mv^2)}{2V}$ and
+$\sqrt{p} \propto v$ if the other variables are constant. Figure \ref{fig:T}
+verifies this.
+
+These results verify the gas law.
+
+\section{Performance}
+The speedup when running the simulation with 40 000 particles for 30 time
+steps can be seen in figure \ref{fig:perf}. Note that the scale for the time
+axis is logarithmic. The algorithm is limited to work on a square
+number of processes and in the figure the square numbers up to 36 can be seen.
+The speedup is super linear due to much of the work in the inner loops being 
+iterating through vectors. Especially the particle collision checking and
+handling benefits from running on more processors because of its
+O(n\textsuperscript{2}) time complexity in the inner loop. 
+
+\section{Source}
+\label{sec:src}
+The most interesting part of the code is the collision detection and handling of
+the particles. The commented source can be seen below.
+\begin{lstlisting}
+        // Check for collisions and move particles
+        for(vector<pcord_t>::iterator a = particles.begin(); a != particles.end() - 1; a++){
+            for(vector<pcord_t>::iterator b = a+1; b != particles.end(); b++){
+                collision_time = collide(&(*a),&(*b));
+                // Collision
+                if(collision_time != -1){
+                    // collided, move particles
+                    interact(&(*a), &(*b), collision_time);
+
+                    // swap collided particle with next particle and skip to
+                    // next iteration
+                    swap(*(a+1), *(b));
+                    a++;
+                    break;
+                }
+            }
+            if(collision_time != -1){
+                if(a == particles.end())
+                    // prevent errors if second last particle collides with last
+                    // particle
+                    break;
+            } else {
+                // if no collision move particle
+                feuler(&(*a), STEP_SIZE);
+            }
+        }
+\end{lstlisting}
+
+Every particle is compared to all the particles to the right of itself for
+collisions. The function \textit{collide} is used for determining the
+collisions. If there is a collision both the particles are updated using
+\textit{interact} and the momentum is added to the local momentum saved in the
+variable \textit{l\_pressure}. The second particle is then swapped with the
+particle next to the first one and the iterator is increased one step. This way
+every particle is only checked once. If there is no collision the particle is
+moved using \textit{feuler}.
+
+\newpage
+\appendix
+\section{Figures}
+\label{sec:fig}
+\begin{figure}[hb]
+        \centering
+        \includegraphics[width=0.8\textwidth]{particles.png}
+        \caption{Pressure vs number of particles}
+        \label{fig:n}
+\end{figure}
+\begin{figure}[hb]
+        \centering
+        \includegraphics[width=0.8\textwidth]{area.png}
+        \caption{Pressure vs $\frac{1}{area}$}
+        \label{fig:V}
+\end{figure}
+\begin{figure}[hb]
+        \centering
+        \includegraphics[width=0.8\textwidth]{temperature.png}
+        \caption{$\sqrt{Pressure}$ vs temperature}
+        \label{fig:T}
+\end{figure}
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=0.8\textwidth]{performance.png}
+        \caption{4000 particles for 30 time steps}
+        \label{fig:perf}
+\end{figure}
+
+\end{document}
