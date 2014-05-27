@@ -48,6 +48,13 @@ full tracing used nine processors with 10 000 particles each for 40 time steps.
 \subsection{Full Trace}
 In the full trace the simulation loop of lab 4 was split into three parts,
 collision detection and handling, wall and border crossings and communication. 
+Figures \ref{fig:ftt} and \ref{fig:ftsc} shows the event timeline and state
+chart. Nothing much can be seen because of the AUTO\_FLUSH, which probably is
+connected to all the warnings we received when running full trace. What we can
+see is that the only part of the loop that takes up enough time to even show up
+on the pie charts is the collision detection and handling. The MPI parts on the
+processes (except on the root) are larger because in the last time step they wait for
+AUTO\_FLUSH to finish. 
 
 \begin{figure}[h]
         \centering
@@ -56,4 +63,10 @@ collision detection and handling, wall and border crossings and communication.
         \label{fig:ftt}
 \end{figure}
 
+\begin{figure}[h]
+        \centering
+        \includegraphics[width=\textwidth]{loop_state_chart.png}
+        \caption{Full Trace State Chart}
+        \label{fig:ftsc}
+\end{figure}
 \end{document}
